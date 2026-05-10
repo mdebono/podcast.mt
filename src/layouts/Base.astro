@@ -1,5 +1,7 @@
 ---
 // src/layouts/Base.astro
+import '../styles/global.css';
+
 const { title = 'podcast.mt', description = 'Poddati minn Malta — the Maltese podcast directory', lang = 'en' } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://podcast.mt');
 ---
@@ -20,8 +22,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://podcast.
 
   <!-- Favicon placeholder -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-  <link rel="stylesheet" href="/src/styles/global.css" />
 </head>
 <body>
 
