@@ -1,0 +1,368 @@
+---
+// src/pages/index.astro
+import Base from '../layouts/Base.astro';
+import ShowCard from '../components/ShowCard.astro';
+import EpisodeRow from '../components/EpisodeRow.astro';
+import { getFeaturedShows, getActiveShows, getLatestEpisodes, episodes, getAllTags } from '../lib/data.js';
+
+const featured = getFeaturedShows();
+const hero = featured[0];
+const allShows = getActiveShows();
+const latest = getLatestEpisodes(6);
+const tags = getAllTags();
+---
+
+<Base title="podcast.mt — Poddati minn Malta">
+
+  <!-- ── Hero ── -->
+  <section class="hero grain">
+    <div class="container hero-inner">
+      <div class="hero-text anim-fadeup">
+        <p class="hero-eyebrow">🎙 The Maltese Podcast Directory</p>
+        <h1 class="hero-title">
+          Poddati<br/>
+          <em>minn Malta.</em>
+        </h1>
+        <p class="hero-sub">
+          Discover podcasts from the Maltese islands — fil-Malti, bl-Ingliż, u aktar.
+        </p>
+        <div class="hero-actions">
+          <a href="/shows" class="btn btn--primary">Browse All Shows</a>
+          <a href="/submit" class="btn btn--outline">Submit Your Show</a>
+        </div>
+        <div class="hero-stats">
+          <span><strong>{allShows.length}</strong> shows</span>
+          <span class="stat-sep">·</span>
+          <span>Updated every 6 hours</span>
+          <span class="stat-sep">·</span>
+          <span>Free to list</span>
+        </div>
+      </div>
+
+      {hero && (
+        <a href={`/shows/${hero.slug}`} class="hero-feature anim-fadeup anim-fadeup-2">
+          <div class="hero-feature__label">
+            <span class="badge badge--feat">Featured Show</span>
+          </div>
+          {hero.coverArt && (
+            <img class="hero-feature__art" src={hero.coverArt} alt={hero.name} width="260" height="260" />
+          )}
+          <div class="hero-feature__info">
+            <h3>{hero.name}</h3>
+            {hero.host && <p>by {hero.host}</p>}
+          </div>
+        </a>
+      )}
+    </div>
+  </section>
+
+  <!-- ── Latest episodes ── -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Latest Episodes</h2>
+        <a href="/episodes" class="section-more">See all →</a>
+      </div>
+      <div class="episodes-list">
+        {latest.map(ep => <EpisodeRow episode={ep} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Shows grid ── -->
+  <section class="section section--tinted">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">All Shows</h2>
+        <a href="/shows" class="section-more">Browse directory →</a>
+      </div>
+
+      <!-- Tag filter -->
+      <div class="tag-filter" id="tagFilter">
+        <button class="tag-btn tag-btn--active" data-tag="all">All</button>
+        {tags.map(t => (
+          <button class="tag-btn" data-tag={t}>{t}</button>
+        ))}
+      </div>
+
+      <div class="shows-grid" id="showsGrid">
+        {allShows.map(show => (
+          <div class="show-grid-item" data-tags={show.tags?.join(',')}>
+            <ShowCard show={show} episodes={episodes} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA banner ── -->
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <div>
+        <h2>Got a podcast from Malta?</h2>
+        <p>List it here for free. Reach the Maltese audience looking for local content.</p>
+      </div>
+      <a href="/submit" class="btn btn--primary">Submit Your Show</a>
+    </div>
+  </section>
+
+</Base>
+
+<!-- Tag filter script -->
+<script>
+const tagFilter = document.getElementById('tagFilter');
+const grid = document.getElementById('showsGrid');
+
+tagFilter?.addEventListener('click', (e) => {
+  const btn = e.target.closest('.tag-btn');
+  if (!btn) return;
+
+  tagFilter.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('tag-btn--active'));
+  btn.classList.add('tag-btn--active');
+
+  const tag = btn.dataset.tag;
+  grid?.querySelectorAll('.show-grid-item').forEach(item => {
+    if (tag === 'all' || item.dataset.tags?.split(',').includes(tag)) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+});
+</script>
+
+<style>
+/* Hero */
+.hero {
+  position: relative;
+  background: var(--ink);
+  color: var(--cream);
+  padding: 72px 0 80px;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 80% 50%, rgba(196,68,12,0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 10% 80%, rgba(26,74,122,0.20) 0%, transparent 60%);
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text { flex: 1; }
+
+.hero-eyebrow {
+  font-family: var(--ff-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 900;
+  color: var(--cream);
+  line-height: 1.0;
+  margin-bottom: 20px;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--sienna);
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: var(--stone);
+  margin-bottom: 32px;
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--ff-mono);
+  font-size: 0.68rem;
+  color: var(--stone);
+  letter-spacing: 0.04em;
+}
+.stat-sep { opacity: 0.4; }
+.hero-stats strong { color: var(--cream); }
+
+/* Hero featured card */
+.hero-feature {
+  flex-shrink: 0;
+  width: 260px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--r-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.hero-feature:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+}
+.hero-feature__art {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--r-md);
+}
+.hero-feature__info h3 {
+  font-size: 1.1rem;
+  color: var(--cream);
+}
+.hero-feature__info p {
+  font-family: var(--ff-mono);
+  font-size: 0.68rem;
+  color: var(--stone);
+  margin-top: 4px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: var(--r-sm);
+  font-family: var(--ff-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+}
+.btn--primary {
+  background: var(--sienna);
+  color: white;
+}
+.btn--primary:hover { background: #a8380a; transform: translateY(-1px); }
+.btn--outline {
+  background: transparent;
+  color: var(--cream);
+  border: 1.5px solid rgba(255,255,255,0.3);
+}
+.btn--outline:hover { border-color: var(--cream); }
+
+/* Sections */
+.section { padding: 64px 0; }
+.section--tinted { background: var(--sand); }
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+.section-title {
+  font-size: 1.8rem;
+}
+.section-more {
+  font-family: var(--ff-mono);
+  font-size: 0.72rem;
+  color: var(--sienna);
+  letter-spacing: 0.04em;
+}
+.section-more:hover { text-decoration: underline; }
+
+/* Episodes list */
+.episodes-list {
+  border: 1px solid var(--warm);
+  border-radius: var(--r-md);
+  background: white;
+  padding: 0 20px;
+}
+
+/* Tag filter */
+.tag-filter {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.tag-btn {
+  font-family: var(--ff-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--warm);
+  background: white;
+  color: var(--stone);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.tag-btn:hover { border-color: var(--stone); color: var(--ink); }
+.tag-btn--active {
+  background: var(--ink);
+  color: var(--cream);
+  border-color: var(--ink);
+}
+
+/* Shows grid */
+.shows-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+/* CTA banner */
+.cta-banner {
+  background: var(--sienna);
+  padding: 56px 0;
+}
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+.cta-inner h2 {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 8px;
+}
+.cta-inner p {
+  color: rgba(255,255,255,0.75);
+  font-size: 1rem;
+}
+.cta-banner .btn--primary {
+  background: white;
+  color: var(--sienna);
+  flex-shrink: 0;
+}
+.cta-banner .btn--primary:hover { background: var(--cream); }
+
+@media (max-width: 768px) {
+  .hero-inner { flex-direction: column; }
+  .hero-feature { width: 100%; flex-direction: row; }
+  .hero-feature__art { width: 80px; height: 80px; }
+  .shows-grid { grid-template-columns: 1fr; }
+  .cta-inner { flex-direction: column; text-align: center; }
+}
+</style>

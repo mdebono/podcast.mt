@@ -1,0 +1,321 @@
+---
+// src/pages/submit.astro
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Submit Your Show — podcast.mt" description="List your Maltese podcast on podcast.mt for free.">
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-eyebrow">For Creators</p>
+      <h1 class="page-title">Submit Your Show</h1>
+      <p class="page-sub">Listing on podcast.mt is free. We review every submission manually.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container--narrow">
+
+      <div class="criteria-box">
+        <h2>Who can submit?</h2>
+        <ul>
+          <li>🇲🇹 Podcasts <strong>produced in Malta or Gozo</strong></li>
+          <li>🗣 Podcasts <strong>in the Maltese language</strong> (anywhere in the world)</li>
+          <li>🌍 Podcasts <strong>primarily about Malta</strong> by Maltese diaspora</li>
+        </ul>
+        <p class="criteria-note">Both active and archived shows are welcome. We list shows in English, Maltese, or both.</p>
+      </div>
+
+      <div class="form-card">
+        <h2 class="form-title">Show Details</h2>
+
+        <form class="submit-form" id="submitForm" novalidate>
+
+          <div class="field-group">
+            <label for="showName">Show name <span class="req">*</span></label>
+            <input type="text" id="showName" name="showName" required placeholder="My Maltese Podcast" />
+          </div>
+
+          <div class="field-group">
+            <label for="rssUrl">
+              RSS feed URL <span class="req">*</span>
+              <span class="field-help">Where to find it: your hosting platform dashboard, or search on <a href="https://podcastindex.org" target="_blank" rel="noopener">podcastindex.org</a></span>
+            </label>
+            <input type="url" id="rssUrl" name="rssUrl" required placeholder="https://feeds.example.com/your-show.rss" />
+          </div>
+
+          <div class="field-group">
+            <label for="language">Primary language <span class="req">*</span></label>
+            <select id="language" name="language" required>
+              <option value="">Select…</option>
+              <option value="mt">Malti (Maltese)</option>
+              <option value="en">English</option>
+              <option value="both">Bilingual (MT + EN)</option>
+            </select>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="hostName">Host name(s)</label>
+              <input type="text" id="hostName" name="hostName" placeholder="Jane Borg" />
+            </div>
+            <div class="field-group">
+              <label for="origin">Origin</label>
+              <select id="origin" name="origin">
+                <option value="mt">Made in Malta / Gozo</option>
+                <option value="diaspora">Maltese diaspora</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>Tags (select all that apply)</label>
+            <div class="tag-checkboxes">
+              {['news','culture','politics','comedy','sport','music','history','religion','business','education','technology','lifestyle'].map(tag => (
+                <label class="tag-check">
+                  <input type="checkbox" name="tags" value={tag} />
+                  {tag}
+                </label>
+              ))}
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>Platform links</label>
+            <div class="platform-inputs">
+              <input type="url" name="spotifyUrl" placeholder="Spotify URL" />
+              <input type="url" name="appleUrl" placeholder="Apple Podcasts URL" />
+              <input type="url" name="webUrl" placeholder="Show website" />
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="descEn">Short description (English)</label>
+            <textarea id="descEn" name="descEn" rows="3" placeholder="A 1–2 sentence description of your show…" maxlength="300"></textarea>
+            <span class="char-count">0 / 300</span>
+          </div>
+
+          <div class="field-group">
+            <label for="descMt">Deskrizzjoni qasira (Malti) — optional</label>
+            <textarea id="descMt" name="descMt" rows="3" placeholder="Deskrizzjoni ta' 1–2 sentenzi tal-programm tiegħek…" maxlength="300"></textarea>
+          </div>
+
+          <div class="field-group">
+            <label for="contactEmail">Your email <span class="req">*</span></label>
+            <input type="email" id="contactEmail" name="contactEmail" required placeholder="you@example.com" />
+            <span class="field-help">Only used to confirm listing. Not published.</span>
+          </div>
+
+          <div class="form-footer">
+            <button type="submit" class="submit-btn" id="submitBtn">
+              Submit Show
+            </button>
+            <p class="form-note">We review submissions within a few days and will email you once listed.</p>
+          </div>
+
+        </form>
+
+        <div class="success-msg" id="successMsg" style="display:none">
+          <span class="success-icon">✅</span>
+          <h3>Grazzi! / Thank you!</h3>
+          <p>We've received your submission and will review it shortly. We'll email you once your show is listed.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</Base>
+
+<script>
+// Character counter
+document.getElementById('descEn')?.addEventListener('input', function() {
+  const counter = this.nextElementSibling;
+  if (counter) counter.textContent = `${this.value.length} / 300`;
+});
+
+// Form submission — sends to Formspree or your own endpoint
+// Replace ACTION_URL with your Formspree endpoint or a serverless function
+const FORM_ACTION = 'https://formspree.io/f/YOUR_FORM_ID';
+
+document.getElementById('submitForm')?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  if (btn) { btn.textContent = 'Submitting…'; btn.disabled = true; }
+
+  const form = e.target;
+  const data = new FormData(form);
+
+  try {
+    const res = await fetch(FORM_ACTION, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' },
+    });
+
+    if (res.ok) {
+      form.style.display = 'none';
+      document.getElementById('successMsg').style.display = '';
+    } else {
+      throw new Error('Server error');
+    }
+  } catch {
+    if (btn) { btn.textContent = 'Submit Show'; btn.disabled = false; }
+    alert('Something went wrong. Please email us at hello@podcast.mt instead.');
+  }
+});
+</script>
+
+<style>
+.page-hero {
+  background: var(--sand);
+  border-bottom: 1px solid var(--warm);
+  padding: 48px 0 40px;
+}
+.page-eyebrow {
+  font-family: var(--ff-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: 8px;
+}
+.page-title { font-size: clamp(2rem, 4vw, 3rem); }
+.page-sub { color: var(--stone); margin-top: 8px; }
+
+.section { padding: 48px 0 80px; }
+
+.criteria-box {
+  background: #e8f5f0;
+  border: 1px solid #a0ddd5;
+  border-radius: var(--r-md);
+  padding: 24px 28px;
+  margin-bottom: 32px;
+}
+.criteria-box h2 { font-size: 1.1rem; margin-bottom: 12px; }
+.criteria-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.criteria-box li { font-size: 0.95rem; }
+.criteria-note { margin-top: 12px; font-size: 0.85rem; color: var(--stone); }
+
+.form-card {
+  background: white;
+  border: 1px solid var(--warm);
+  border-radius: var(--r-md);
+  padding: 36px;
+}
+.form-title { font-size: 1.4rem; margin-bottom: 28px; }
+
+.submit-form { display: flex; flex-direction: column; gap: 22px; }
+
+.field-group { display: flex; flex-direction: column; gap: 6px; }
+.field-group label {
+  font-family: var(--ff-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.req { color: var(--sienna); }
+.field-help {
+  font-size: 0.7rem;
+  color: var(--stone);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.field-help a { color: var(--sienna); text-decoration: underline; }
+
+input[type="text"],
+input[type="url"],
+input[type="email"],
+select,
+textarea {
+  padding: 10px 14px;
+  border: 1px solid var(--warm);
+  border-radius: var(--r-sm);
+  font-family: var(--ff-body);
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: var(--cream);
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--stone); }
+textarea { resize: vertical; }
+
+.char-count {
+  font-family: var(--ff-mono);
+  font-size: 0.62rem;
+  color: var(--stone);
+  text-align: right;
+}
+
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.tag-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tag-check {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--ff-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border: 1px solid var(--warm);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.15s;
+  color: var(--stone);
+}
+.tag-check:has(input:checked) {
+  background: var(--ink);
+  color: var(--cream);
+  border-color: var(--ink);
+}
+.tag-check input { display: none; }
+
+.platform-inputs { display: flex; flex-direction: column; gap: 8px; }
+
+.form-footer { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+
+.submit-btn {
+  background: var(--sienna);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: var(--r-sm);
+  font-family: var(--ff-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.submit-btn:hover { background: #a8380a; }
+.submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.form-note { font-size: 0.82rem; color: var(--stone); }
+
+/* Success */
+.success-msg {
+  text-align: center;
+  padding: 48px 24px;
+}
+.success-icon { font-size: 3rem; display: block; margin-bottom: 16px; }
+.success-msg h3 { font-size: 1.4rem; margin-bottom: 8px; }
+.success-msg p { color: var(--stone); }
+
+@media (max-width: 640px) {
+  .field-row { grid-template-columns: 1fr; }
+  .form-card { padding: 24px; }
+}
+</style>

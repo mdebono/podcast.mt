@@ -1,0 +1,260 @@
+---
+// src/pages/shows/index.astro
+import Base from '../../layouts/Base.astro';
+import ShowCard from '../../components/ShowCard.astro';
+import { getActiveShows, getAllTags, episodes } from '../../lib/data.js';
+
+const shows = getActiveShows();
+const tags = getAllTags();
+const maltese = shows.filter(s => s.language?.includes('mt'));
+const english = shows.filter(s => !s.language?.includes('mt'));
+---
+
+<Base title="All Shows — podcast.mt" description="Browse all Maltese podcasts — in Maltese, from Malta, about Malta.">
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-eyebrow">Directory</p>
+      <h1 class="page-title">All Shows</h1>
+      <p class="page-sub">{shows.length} podcasts from, about, or in the Maltese islands</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- Filters bar -->
+      <div class="filters">
+        <div class="filter-group">
+          <span class="filter-label">Language</span>
+          <div class="filter-btns" id="langFilter">
+            <button class="filter-btn filter-btn--active" data-lang="all">All</button>
+            <button class="filter-btn" data-lang="mt">Malti 🇲🇹</button>
+            <button class="filter-btn" data-lang="en">English</button>
+            <button class="filter-btn" data-lang="both">Bilingual</button>
+          </div>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">Topic</span>
+          <div class="filter-btns" id="tagFilter">
+            <button class="filter-btn filter-btn--active" data-tag="all">All</button>
+            {tags.map(t => (
+              <button class="filter-btn" data-tag={t}>{t}</button>
+            ))}
+          </div>
+        </div>
+        <div class="filter-search">
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search shows…"
+            autocomplete="off"
+            aria-label="Search shows"
+          />
+        </div>
+      </div>
+
+      <!-- Results count -->
+      <p class="results-count" id="resultsCount">{shows.length} shows</p>
+
+      <!-- Grid -->
+      <div class="shows-grid" id="showsGrid">
+        {shows.map(show => (
+          <div
+            class="show-item"
+            data-tags={show.tags?.join(',')}
+            data-lang={
+              show.language?.includes('mt') && show.language?.includes('en') ? 'both'
+              : show.language?.includes('mt') ? 'mt'
+              : 'en'
+            }
+            data-name={show.name.toLowerCase()}
+            data-host={(show.host ?? '').toLowerCase()}
+          >
+            <ShowCard show={show} episodes={episodes} />
+          </div>
+        ))}
+      </div>
+
+      <p class="no-results" id="noResults" style="display:none">
+        No shows found. <a href="/submit">Know one we're missing?</a>
+      </p>
+
+    </div>
+  </section>
+
+</Base>
+
+<script>
+let activeLang = 'all';
+let activeTag = 'all';
+let searchQuery = '';
+
+function applyFilters() {
+  const items = document.querySelectorAll('.show-item');
+  let visible = 0;
+
+  items.forEach(item => {
+    const langs = item.dataset.lang;
+    const tags = item.dataset.tags?.split(',') ?? [];
+    const name = item.dataset.name ?? '';
+    const host = item.dataset.host ?? '';
+
+    const langOk = activeLang === 'all' || langs === activeLang;
+    const tagOk = activeTag === 'all' || tags.includes(activeTag);
+    const searchOk = !searchQuery || name.includes(searchQuery) || host.includes(searchQuery);
+
+    if (langOk && tagOk && searchOk) {
+      item.style.display = '';
+      visible++;
+    } else {
+      item.style.display = 'none';
+    }
+  });
+
+  const count = document.getElementById('resultsCount');
+  if (count) count.textContent = `${visible} show${visible !== 1 ? 's' : ''}`;
+
+  const noResults = document.getElementById('noResults');
+  if (noResults) noResults.style.display = visible === 0 ? '' : 'none';
+}
+
+// Lang filter
+document.getElementById('langFilter')?.addEventListener('click', e => {
+  const btn = e.target.closest('.filter-btn');
+  if (!btn || !btn.dataset.lang) return;
+  document.querySelectorAll('#langFilter .filter-btn').forEach(b => b.classList.remove('filter-btn--active'));
+  btn.classList.add('filter-btn--active');
+  activeLang = btn.dataset.lang;
+  applyFilters();
+});
+
+// Tag filter
+document.getElementById('tagFilter')?.addEventListener('click', e => {
+  const btn = e.target.closest('.filter-btn');
+  if (!btn || !btn.dataset.tag) return;
+  document.querySelectorAll('#tagFilter .filter-btn').forEach(b => b.classList.remove('filter-btn--active'));
+  btn.classList.add('filter-btn--active');
+  activeTag = btn.dataset.tag;
+  applyFilters();
+});
+
+// Search
+document.getElementById('searchInput')?.addEventListener('input', e => {
+  searchQuery = e.target.value.toLowerCase().trim();
+  applyFilters();
+});
+</script>
+
+<style>
+.page-hero {
+  background: var(--sand);
+  border-bottom: 1px solid var(--warm);
+  padding: 48px 0 40px;
+}
+.page-eyebrow {
+  font-family: var(--ff-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: 8px;
+}
+.page-title { font-size: clamp(2rem, 4vw, 3rem); }
+.page-sub {
+  color: var(--stone);
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+.section { padding: 48px 0 72px; }
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background: white;
+  border: 1px solid var(--warm);
+  border-radius: var(--r-md);
+  margin-bottom: 28px;
+}
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.filter-label {
+  font-family: var(--ff-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--stone);
+  flex-shrink: 0;
+  width: 60px;
+}
+.filter-btns {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.filter-btn {
+  font-family: var(--ff-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--warm);
+  background: white;
+  color: var(--stone);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.filter-btn:hover { border-color: var(--stone); color: var(--ink); }
+.filter-btn--active { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+
+.filter-search input {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px 14px;
+  border: 1px solid var(--warm);
+  border-radius: var(--r-sm);
+  font-family: var(--ff-body);
+  font-size: 0.9rem;
+  background: var(--cream);
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.filter-search input:focus { border-color: var(--stone); }
+
+.results-count {
+  font-family: var(--ff-mono);
+  font-size: 0.7rem;
+  color: var(--stone);
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+
+.shows-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 48px;
+  color: var(--stone);
+  font-size: 0.95rem;
+}
+.no-results a { color: var(--sienna); text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .shows-grid { grid-template-columns: 1fr; }
+  .filter-group { flex-direction: column; align-items: flex-start; }
+  .filter-label { width: auto; }
+}
+</style>

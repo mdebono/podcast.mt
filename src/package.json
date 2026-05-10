@@ -1,0 +1,20 @@
+{
+  "name": "podcast-mt",
+  "version": "0.1.0",
+  "description": "Poddati minn Malta — Maltese podcast directory",
+  "type": "module",
+  "scripts": {
+    "ingest": "node scripts/ingest.js",
+    "dev": "astro dev",
+    "build": "node scripts/ingest.js && astro build",
+    "preview": "astro preview",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "astro": "^4.0.0",
+    "fast-xml-parser": "^4.3.6"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

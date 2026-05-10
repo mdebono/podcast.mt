@@ -1,0 +1,145 @@
+---
+// src/components/ShowCard.astro
+import { formatDate, langLabel, daysSince } from '../lib/data.js';
+
+const { show, episodes = [] } = Astro.props;
+const latestEp = episodes.find(e => e.showSlug === show.slug);
+const isNew = latestEp ? daysSince(latestEp.pubDateIso) < 8 : false;
+const lang = show.language ?? ['en'];
+const isMalti = lang.includes('mt');
+---
+
+<a href={`/shows/${show.slug}`} class="show-card" data-tags={show.tags?.join(',')}>
+  <div class="show-card__art">
+    {show.coverArt
+      ? <img src={show.coverArt} alt={show.name} width="120" height="120" loading="lazy" />
+      : <div class="show-card__art-placeholder">🎙</div>
+    }
+    {isNew && <span class="show-card__new-dot" title="New episode this week"></span>}
+  </div>
+
+  <div class="show-card__body">
+    <div class="show-card__badges">
+      <span class={`badge ${isMalti ? 'badge--lang-mt' : 'badge--lang'}`}>
+        {langLabel(lang)}
+      </span>
+      {show.featured && <span class="badge badge--feat">Featured</span>}
+      {isNew && <span class="badge badge--new">New</span>}
+    </div>
+
+    <h3 class="show-card__title">{show.name}</h3>
+    {show.host && <p class="show-card__host">by {show.host}</p>}
+
+    <p class="show-card__desc">
+      {show.description?.en?.slice(0, 100)}…
+    </p>
+
+    <div class="show-card__tags">
+      {show.tags?.slice(0,3).map(t => (
+        <span class="badge badge--tag">{t}</span>
+      ))}
+    </div>
+  </div>
+</a>
+
+<style>
+.show-card {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--warm);
+  background: white;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+.show-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+  border-color: var(--stone);
+}
+
+.show-card__art {
+  position: relative;
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+}
+.show-card__art img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--r-sm);
+}
+.show-card__art-placeholder {
+  width: 80px;
+  height: 80px;
+  background: var(--sand);
+  border-radius: var(--r-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+.show-card__new-dot {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 12px;
+  height: 12px;
+  background: var(--sienna);
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.show-card__body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.show-card__badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+}
+
+.show-card__title {
+  font-family: var(--ff-head);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.show-card__host {
+  font-family: var(--ff-mono);
+  font-size: 0.68rem;
+  color: var(--stone);
+  letter-spacing: 0.04em;
+}
+
+.show-card__desc {
+  font-size: 0.85rem;
+  color: var(--ink);
+  opacity: 0.7;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.show-card__tags {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+</style>

@@ -1,0 +1,245 @@
+---
+// src/pages/about.astro
+import Base from '../layouts/Base.astro';
+import { getActiveShows } from '../lib/data.js';
+const shows = getActiveShows();
+---
+
+<Base title="About — podcast.mt" description="About podcast.mt, the directory of Maltese podcasts.">
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-eyebrow">About</p>
+      <h1 class="page-title">podcast.mt</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container--narrow about-body">
+
+      <div class="about-block">
+        <h2>X'inhu podcast.mt? / What is podcast.mt?</h2>
+        <p>
+          podcast.mt is a free, independent directory of podcasts from, in, or about Malta.
+          We index shows in Maltese, in English, and bilingual shows — anything with a meaningful
+          connection to the Maltese islands.
+        </p>
+        <p>
+          podcast.mt huwa direttorju indipendenti u bla ħlas ta' podcasts minn Malta, bil-Malti,
+          jew dwar Malta.
+        </p>
+      </div>
+
+      <div class="about-block">
+        <h2>How it works</h2>
+        <p>
+          Each listed show has an RSS feed. We fetch every feed automatically every 6 hours and
+          display the latest episodes. Show information (title, description, tags) is curated
+          manually to keep quality high.
+        </p>
+        <p>
+          We do not host audio. Clicking play or episode links takes you to the original source.
+          We are a discovery layer, not a hosting platform.
+        </p>
+      </div>
+
+      <div class="about-block">
+        <h2>Listing criteria</h2>
+        <ul class="about-list">
+          <li>Produced in Malta or Gozo</li>
+          <li>Primarily in the Maltese language (anywhere in the world)</li>
+          <li>Primarily about Malta, by Maltese diaspora creators</li>
+        </ul>
+        <p>
+          Both active and archived shows are listed. We don't require a minimum episode count.
+          <a href="/submit">Submit your show here.</a>
+        </p>
+      </div>
+
+      <div class="about-block" id="badge">
+        <h2>Listed on podcast.mt — badge</h2>
+        <p>If your show is listed, you're welcome to use this badge on your website:</p>
+        <div class="badge-preview">
+          <div class="site-badge">
+            <span>🎙</span>
+            <span>Listed on <strong>podcast.mt</strong></span>
+          </div>
+        </div>
+        <details class="badge-code">
+          <summary>Get the HTML</summary>
+          <pre><code>{`<a href="https://podcast.mt" target="_blank" rel="noopener"
+  style="display:inline-flex;align-items:center;gap:8px;
+  padding:8px 16px;border:1.5px solid #1a1410;border-radius:6px;
+  font-family:monospace;font-size:13px;color:#1a1410;text-decoration:none">
+  🎙 Listed on <strong>podcast.mt</strong>
+</a>`}</code></pre>
+        </details>
+      </div>
+
+      <div class="about-block">
+        <h2>Contact</h2>
+        <p>
+          Questions, corrections, or partnership enquiries:
+          <a href="mailto:hello@podcast.mt">hello@podcast.mt</a>
+        </p>
+        <p>
+          To submit a new show: <a href="/submit">podcast.mt/submit</a>
+        </p>
+      </div>
+
+      <div class="stats-strip">
+        <div class="stat">
+          <strong>{shows.length}</strong>
+          <span>shows listed</span>
+        </div>
+        <div class="stat">
+          <strong>{shows.filter(s => s.language?.includes('mt')).length}</strong>
+          <span>in Maltese</span>
+        </div>
+        <div class="stat">
+          <strong>Free</strong>
+          <span>to list your show</span>
+        </div>
+        <div class="stat">
+          <strong>Every 6h</strong>
+          <span>episode updates</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</Base>
+
+<style>
+.page-hero {
+  background: var(--sand);
+  border-bottom: 1px solid var(--warm);
+  padding: 48px 0 40px;
+}
+.page-eyebrow {
+  font-family: var(--ff-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: 8px;
+}
+.page-title { font-size: clamp(2rem, 4vw, 3rem); }
+
+.section { padding: 48px 0 80px; }
+
+.about-body { display: flex; flex-direction: column; gap: 48px; }
+
+.about-block h2 {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--warm);
+}
+.about-block p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.about-block p:last-child { margin-bottom: 0; }
+.about-block a { color: var(--sienna); text-decoration: underline; }
+
+.about-list {
+  list-style: none;
+  margin-bottom: 16px;
+}
+.about-list li {
+  padding: 8px 0 8px 20px;
+  position: relative;
+  border-bottom: 1px solid var(--warm);
+  font-size: 0.95rem;
+}
+.about-list li::before {
+  content: '🇲🇹';
+  position: absolute;
+  left: 0;
+  font-size: 0.8rem;
+}
+
+/* Badge */
+.badge-preview {
+  margin: 16px 0;
+  padding: 24px;
+  background: var(--sand);
+  border-radius: var(--r-md);
+  border: 1px solid var(--warm);
+  display: flex;
+  justify-content: center;
+}
+.site-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1.5px solid var(--ink);
+  border-radius: var(--r-sm);
+  font-family: var(--ff-mono);
+  font-size: 0.8rem;
+  color: var(--ink);
+}
+
+.badge-code {
+  margin-top: 12px;
+}
+.badge-code summary {
+  font-family: var(--ff-mono);
+  font-size: 0.72rem;
+  color: var(--stone);
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+.badge-code pre {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 16px;
+  border-radius: var(--r-sm);
+  overflow-x: auto;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+/* Stats */
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--warm);
+  border: 1px solid var(--warm);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background: white;
+  text-align: center;
+  gap: 4px;
+}
+.stat strong {
+  font-family: var(--ff-head);
+  font-size: 1.8rem;
+  color: var(--sienna);
+}
+.stat span {
+  font-family: var(--ff-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
+@media (max-width: 640px) {
+  .stats-strip { grid-template-columns: repeat(2, 1fr); }
+}
+</style>

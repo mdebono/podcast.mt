@@ -1,0 +1,141 @@
+---
+// src/components/EpisodeRow.astro
+import { formatDate, formatDuration } from '../lib/data.js';
+import { shows } from '../lib/data.js';
+
+const { episode, showCover = true } = Astro.props;
+const show = shows.find(s => s.slug === episode.showSlug);
+---
+
+<div class="ep-row">
+  {showCover && show?.coverArt && (
+    <a href={`/shows/${show.slug}`} class="ep-row__art">
+      <img src={show.coverArt} alt={show?.name} width="52" height="52" loading="lazy" />
+    </a>
+  )}
+
+  <div class="ep-row__body">
+    <div class="ep-row__meta">
+      {showCover && show && (
+        <a href={`/shows/${show.slug}`} class="ep-row__show">{show.name}</a>
+      )}
+      <span class="ep-row__date">{formatDate(episode.pubDateIso)}</span>
+      {episode.durationSeconds && (
+        <span class="ep-row__dur">{formatDuration(episode.durationSeconds)}</span>
+      )}
+    </div>
+    <h4 class="ep-row__title">
+      {episode.episodeUrl
+        ? <a href={episode.episodeUrl} target="_blank" rel="noopener">{episode.title}</a>
+        : episode.title
+      }
+    </h4>
+    {episode.description && (
+      <p class="ep-row__desc">{episode.description}</p>
+    )}
+  </div>
+
+  {episode.audioUrl && (
+    <div class="ep-row__play">
+      <button
+        class="play-btn"
+        data-audio={episode.audioUrl}
+        data-title={episode.title}
+        aria-label={`Play: ${episode.title}`}
+      >
+        ▶
+      </button>
+    </div>
+  )}
+</div>
+
+<style>
+.ep-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--warm);
+}
+.ep-row:last-child { border-bottom: none; }
+
+.ep-row__art {
+  flex-shrink: 0;
+}
+.ep-row__art img {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: var(--r-sm);
+}
+
+.ep-row__body { flex: 1; min-width: 0; }
+
+.ep-row__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.ep-row__show {
+  font-family: var(--ff-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sienna);
+}
+.ep-row__show:hover { text-decoration: underline; }
+
+.ep-row__date, .ep-row__dur {
+  font-family: var(--ff-mono);
+  font-size: 0.65rem;
+  color: var(--stone);
+  letter-spacing: 0.04em;
+}
+
+.ep-row__title {
+  font-family: var(--ff-head);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+}
+.ep-row__title a:hover { color: var(--sienna); }
+
+.ep-row__desc {
+  font-size: 0.82rem;
+  color: var(--ink);
+  opacity: 0.6;
+  margin-top: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ep-row__play { flex-shrink: 0; padding-top: 4px; }
+
+.play-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--warm);
+  background: white;
+  color: var(--sienna);
+  font-size: 0.7rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s;
+  padding-left: 2px;
+}
+.play-btn:hover {
+  background: var(--sienna);
+  color: white;
+  border-color: var(--sienna);
+}
+</style>

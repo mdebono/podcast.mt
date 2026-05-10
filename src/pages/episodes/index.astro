@@ -1,0 +1,53 @@
+---
+// src/pages/episodes/index.astro
+import Base from '../../layouts/Base.astro';
+import EpisodeRow from '../../components/EpisodeRow.astro';
+import { episodes } from '../../lib/data.js';
+---
+
+<Base title="Latest Episodes — podcast.mt" description="The newest episodes from Maltese podcasts.">
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-eyebrow">Latest</p>
+      <h1 class="page-title">All Episodes</h1>
+      <p class="page-sub">Newest episodes across all shows, updated every 6 hours</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container--narrow">
+      <div class="episodes-list">
+        {episodes.map(ep => <EpisodeRow episode={ep} />)}
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+.page-hero {
+  background: var(--sand);
+  border-bottom: 1px solid var(--warm);
+  padding: 48px 0 40px;
+}
+.page-eyebrow {
+  font-family: var(--ff-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: 8px;
+}
+.page-title { font-size: clamp(2rem, 4vw, 3rem); }
+.page-sub { color: var(--stone); margin-top: 8px; font-size: 1rem; }
+
+.section { padding: 48px 0 80px; }
+
+.episodes-list {
+  background: white;
+  border: 1px solid var(--warm);
+  border-radius: var(--r-md);
+  padding: 0 20px;
+}
+</style>

@@ -1,0 +1,225 @@
+---
+// src/pages/shows/[slug].astro
+import Base from '../../layouts/Base.astro';
+import EpisodeRow from '../../components/EpisodeRow.astro';
+import { shows, getEpisodesForShow, formatDate, langLabel, daysSince } from '../../lib/data.js';
+
+export function getStaticPaths() {
+  return shows.filter(s => s.active).map(show => ({
+    params: { slug: show.slug },
+    props: { show },
+  }));
+}
+
+const { show } = Astro.props;
+const episodes = getEpisodesForShow(show.slug);
+const latestEp = episodes[0];
+const isNew = latestEp ? daysSince(latestEp.pubDateIso) < 8 : false;
+const lang = show.language ?? ['en'];
+const isMalti = lang.includes('mt');
+---
+
+<Base
+  title={`${show.name} — podcast.mt`}
+  description={show.description?.en ?? show.description?.mt ?? ''}
+>
+
+  <div class="show-page">
+
+    <!-- Header -->
+    <header class="show-header">
+      <div class="container show-header-inner">
+        <div class="show-art">
+          {show.coverArt
+            ? <img src={show.coverArt} alt={show.name} width="180" height="180" />
+            : <div class="show-art-placeholder">🎙</div>
+          }
+        </div>
+
+        <div class="show-info">
+          <div class="show-badges">
+            <span class={`badge ${isMalti ? 'badge--lang-mt' : 'badge--lang'}`}>
+              {langLabel(lang)}
+            </span>
+            {show.featured && <span class="badge badge--feat">Featured</span>}
+            {isNew && <span class="badge badge--new">New episode</span>}
+            {show.origin === 'diaspora' && <span class="badge badge--tag">Diaspora</span>}
+          </div>
+
+          <h1 class="show-title">{show.name}</h1>
+          {show.nameMt && show.nameMt !== show.name && (
+            <p class="show-title-mt">{show.nameMt}</p>
+          )}
+          {show.host && <p class="show-host">by {show.host}</p>}
+
+          <p class="show-desc">{show.description?.en}</p>
+          {show.description?.mt && (
+            <p class="show-desc show-desc--mt">{show.description.mt}</p>
+          )}
+
+          <div class="show-tags">
+            {show.tags?.map(t => <span class="badge badge--tag">{t}</span>)}
+          </div>
+
+          <!-- Links -->
+          <div class="show-links">
+            {show.links?.spotify && (
+              <a href={show.links.spotify} target="_blank" rel="noopener" class="show-link show-link--spotify">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                Spotify
+              </a>
+            )}
+            {show.links?.apple && (
+              <a href={show.links.apple} target="_blank" rel="noopener" class="show-link show-link--apple">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.56-1.702z"/></svg>
+                Apple Podcasts
+              </a>
+            )}
+            {show.links?.web && (
+              <a href={show.links.web} target="_blank" rel="noopener" class="show-link show-link--web">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Website
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Episodes -->
+    <div class="container show-body">
+      <section class="episodes-section">
+        <h2 class="episodes-title">Recent Episodes</h2>
+        {episodes.length > 0
+          ? <div class="episodes-list">
+              {episodes.map(ep => <EpisodeRow episode={ep} showCover={false} />)}
+            </div>
+          : <p class="no-episodes">No recent episodes found.</p>
+        }
+      </section>
+
+      <!-- Back -->
+      <a href="/shows" class="back-link">← Back to all shows</a>
+    </div>
+
+  </div>
+
+</Base>
+
+<style>
+.show-page { padding-bottom: 80px; }
+
+.show-header {
+  background: var(--sand);
+  border-bottom: 1px solid var(--warm);
+  padding: 48px 0;
+}
+.show-header-inner {
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+}
+
+.show-art img, .show-art-placeholder {
+  width: 160px;
+  height: 160px;
+  border-radius: var(--r-md);
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-lg);
+}
+.show-art-placeholder {
+  background: var(--warm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.show-info { flex: 1; }
+.show-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+
+.show-title {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-bottom: 4px;
+}
+.show-title-mt {
+  font-family: var(--ff-head);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--stone);
+  margin-bottom: 4px;
+}
+.show-host {
+  font-family: var(--ff-mono);
+  font-size: 0.72rem;
+  color: var(--stone);
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
+.show-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--ink);
+  max-width: 600px;
+  margin-bottom: 8px;
+}
+.show-desc--mt {
+  color: var(--stone);
+  font-style: italic;
+}
+
+.show-tags { display: flex; gap: 6px; flex-wrap: wrap; margin: 12px 0; }
+
+.show-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.show-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--r-sm);
+  font-family: var(--ff-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--warm);
+  background: white;
+  color: var(--ink);
+  transition: all 0.2s;
+}
+.show-link:hover { border-color: var(--stone); box-shadow: var(--shadow); }
+.show-link--spotify:hover { color: #1db954; border-color: #1db954; }
+.show-link--apple:hover { color: #fc3c44; border-color: #fc3c44; }
+
+.show-body { padding-top: 48px; }
+
+.episodes-section {
+  border: 1px solid var(--warm);
+  border-radius: var(--r-md);
+  background: white;
+  padding: 24px 24px 8px;
+  margin-bottom: 32px;
+}
+.episodes-title {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--warm);
+}
+.episodes-list { padding: 0; }
+.no-episodes { color: var(--stone); padding: 24px 0; font-size: 0.9rem; }
+
+.back-link {
+  font-family: var(--ff-mono);
+  font-size: 0.72rem;
+  color: var(--stone);
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+.back-link:hover { color: var(--ink); }
+
+@media (max-width: 640px) {
+  .show-header-inner { flex-direction: column; }
+  .show-art img, .show-art-placeholder { width: 120px; height: 120px; }
+}
+</style>
