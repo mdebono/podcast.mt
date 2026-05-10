@@ -7,34 +7,34 @@ const translations = {
     home: 'Dar',
     shows: 'Podcasts',
     episodes: 'Episodi',
-    submit: 'Ibgħat',
+    submit: 'Żid',
     about: 'Dwar',
-    submitShow: '+ Ibgħat Podcast',
+    submitShow: '+ Żid Podcast',
 
     // Hero
     heroTitle: 'Poddati<br/><em>minn Malta.</em>',
-    heroSub: 'Skopri podcasts mill-gżejjer Maltin — fil-Malti, bl-Ingliż, u aktar.',
+    heroSub: 'Skopri podcasts mill-gżejjer Maltin — bil-Malti, bl-Ingliż, u aktar.',
     heroStatsShows: 'podcasts',
     heroStatsUpdated: 'Aġġornat kull 6 sigħat',
     heroStatsFree: 'B’xejn biex tniżżel',
     browseAllShows: 'Ara l-Podcasts Kollha',
-    submitYourShow: 'Ibgħat il-Podcast Tiegħek',
+    submitYourShow: 'Żid il-Podcast Tiegħek',
 
     // Sections
-    latestEpisodes: 'Episodi Riċenti',
-    seeAll: 'Ara kollha →',
-    allShows: 'Podcasts Kollha',
-    browseDirectory: 'Esplora d-direttorju →',
+    latestEpisodes: 'Episodji Riċenti',
+    seeAll: 'Ara kollox →',
+    allShows: 'Podcasts',
+    browseDirectory: 'Iftaħ id-direttorju →',
 
     // CTA
-    gotPodcast: 'Għandek podcast minn Malta?',
-    listHere: 'Niżżel hawn b’xejn. Laħħaq mal-udjenza Maltija li qed tfittex kontenut lokali.',
-    submitShow: 'Ibgħat il-Podcast Tiegħek',
+    gotPodcast: 'Għandek podcast Malti?',
+    listHere: 'Żidu magħna b’xejn. Ilħaq udjenza Maltija li qed tfittex kontenut lokali.',
+    submitShow: 'Żid il-Podcast Tiegħek',
 
     // Footer
-    madeWithLove: 'Magħmul b’ħabba f’Malta 🇲🇹',
+    madeWithLove: 'Magħmul b’imħabba f’Malta 🇲🇹',
     discover: 'Skopri',
-    creators: 'Kreaturi',
+    creators: 'Produtturi',
     getBadge: 'Ikseb il-Badge',
     aboutUs: 'Dwarna',
     contact: 'Kuntatt',
@@ -48,21 +48,20 @@ const translations = {
 
     // Other
     searchShows: 'Fittex podcasts…',
-    noShowsFound: 'Ma nstabet l-ebda podcast. Xi ħaġa nieqsa?',
+    noShowsFound: 'Ma nstab l-ebda podcast. Taf b’xi wieħed nieqes?',
     backToAllShows: '← Lura għall-podcasts kollha',
-    recentEpisodes: 'Episodi Riċenti',
-    noEpisodes: 'Ma nstabet l-ebda episod riċent.',
+    recentEpisodes: 'Episodji Riċenti',
+    noEpisodes: 'Ma nstab l-ebda episodju riċenti.',
     by: 'minn',
     duration: 'min',
     hours: 'h',
     minutes: 'min',
     daysAgo: 'ġranet ilu',
-    newEpisode: 'Episod ġdid',
-    featured: 'Rrakkomandat',
-    diaspora: 'Dijaspora',
+    newEpisode: 'Episodju ġdid',
+    featured: 'Rakkomandat',
     language: 'Lingwa',
     all: 'Kollha',
-    maltese: 'Malti 🇲🇹',
+    maltese: 'Malti',
     english: 'English',
     bilingual: 'Bilingwi',
     topic: 'Suġġett',
@@ -96,7 +95,7 @@ const translations = {
 
     // CTA
     gotPodcast: 'Got a podcast from Malta?',
-    listHere: 'List it here for free. Reach the Maltese audience looking for local content.',
+    listHere: 'List it with us for free. Reach a Maltese audience looking for local content.',
     submitShow: 'Submit Your Show',
 
     // Footer
@@ -130,7 +129,7 @@ const translations = {
     diaspora: 'Diaspora',
     language: 'Language',
     all: 'All',
-    maltese: 'Malti 🇲🇹',
+    maltese: 'Malti',
     english: 'English',
     bilingual: 'Bilingual',
     topic: 'Topic',
