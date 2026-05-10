@@ -1,5 +1,8 @@
 name: RSS Ingestion & Deploy
 
+permissions:
+  contents: write
+
 on:
   # Run every 6 hours
   schedule:
