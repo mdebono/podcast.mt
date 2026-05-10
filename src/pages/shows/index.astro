@@ -10,13 +10,13 @@ const maltese = shows.filter(s => s.language?.includes('mt'));
 const english = shows.filter(s => !s.language?.includes('mt'));
 ---
 
-<Base title="All Shows — podcast.mt" description="Browse all Maltese podcasts — in Maltese, from Malta, about Malta.">
+<Base title="Podcasts Kollha — podcast.mt" description="Esplora l-podcasts Maltin kollha — fil-Malti, minn Malta, dwar Malta." lang="mt">
 
   <section class="page-hero">
     <div class="container">
-      <p class="page-eyebrow">Directory</p>
-      <h1 class="page-title">All Shows</h1>
-      <p class="page-sub">{shows.length} podcasts from, about, or in the Maltese islands</p>
+      <p class="page-eyebrow" data-i18n="directory">Direttorju</p>
+      <h1 class="page-title" data-i18n="allShows">Podcasts Kollha</h1>
+      <p class="page-sub">{shows.length} <span data-i18n="shows">podcasts</span> minn, dwar, jew fil-gżejjer Maltin</p>
     </div>
   </section>
 
@@ -26,18 +26,18 @@ const english = shows.filter(s => !s.language?.includes('mt'));
       <!-- Filters bar -->
       <div class="filters">
         <div class="filter-group">
-          <span class="filter-label">Language</span>
+          <span class="filter-label" data-i18n="language">Lingwa</span>
           <div class="filter-btns" id="langFilter">
-            <button class="filter-btn filter-btn--active" data-lang="all">All</button>
-            <button class="filter-btn" data-lang="mt">Malti 🇲🇹</button>
-            <button class="filter-btn" data-lang="en">English</button>
-            <button class="filter-btn" data-lang="both">Bilingual</button>
+            <button class="filter-btn filter-btn--active" data-i18n="all">Kollha</button>
+            <button class="filter-btn" data-lang="mt" data-i18n="maltese">Malti 🇲🇹</button>
+            <button class="filter-btn" data-lang="en" data-i18n="english">English</button>
+            <button class="filter-btn" data-lang="both" data-i18n="bilingual">Bilingwi</button>
           </div>
         </div>
         <div class="filter-group">
-          <span class="filter-label">Topic</span>
+          <span class="filter-label" data-i18n="topic">Suġġett</span>
           <div class="filter-btns" id="tagFilter">
-            <button class="filter-btn filter-btn--active" data-tag="all">All</button>
+            <button class="filter-btn filter-btn--active" data-i18n="all">Kollha</button>
             {tags.map(t => (
               <button class="filter-btn" data-tag={t}>{t}</button>
             ))}
@@ -47,7 +47,8 @@ const english = shows.filter(s => !s.language?.includes('mt'));
           <input
             type="search"
             id="searchInput"
-            placeholder="Search shows…"
+            data-i18n-placeholder="searchShows"
+            placeholder="Fittex podcasts…"
             autocomplete="off"
             aria-label="Search shows"
           />
@@ -55,7 +56,7 @@ const english = shows.filter(s => !s.language?.includes('mt'));
       </div>
 
       <!-- Results count -->
-      <p class="results-count" id="resultsCount">{shows.length} shows</p>
+      <p class="results-count" id="resultsCount">{shows.length} <span data-i18n="shows">podcasts</span></p>
 
       <!-- Grid -->
       <div class="shows-grid" id="showsGrid">
@@ -76,8 +77,8 @@ const english = shows.filter(s => !s.language?.includes('mt'));
         ))}
       </div>
 
-      <p class="no-results" id="noResults" style="display:none">
-        No shows found. <a href="/submit">Know one we're missing?</a>
+      <p class="no-results" id="noResults" style="display:none" data-i18n="noShowsFound">
+        Ma nstabet l-ebda podcast. <a href="/submit" data-i18n="knowOne">Xi ħaġa nieqsa?</a>
       </p>
 
     </div>
@@ -113,7 +114,10 @@ function applyFilters() {
   });
 
   const count = document.getElementById('resultsCount');
-  if (count) count.textContent = `${visible} show${visible !== 1 ? 's' : ''}`;
+  if (count) {
+    const unit = visible === 1 ? 'show' : 'shows';
+    count.innerHTML = `${visible} <span data-i18n="${unit}">${unit}</span>`;
+  }
 
   const noResults = document.getElementById('noResults');
   if (noResults) noResults.style.display = visible === 0 ? '' : 'none';
@@ -144,6 +148,30 @@ document.getElementById('searchInput')?.addEventListener('input', e => {
   searchQuery = e.target.value.toLowerCase().trim();
   applyFilters();
 });
+
+// Update placeholders and dynamic text
+import { getTranslation, getCurrentLang } from '../../lib/i18n.js';
+
+function updatePageTranslations() {
+  const lang = getCurrentLang();
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    el.textContent = getTranslation(lang, key);
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.dataset.i18nPlaceholder;
+    el.placeholder = getTranslation(lang, key);
+  });
+  // Update results count
+  const countEl = document.getElementById('resultsCount');
+  if (countEl) {
+    const visible = document.querySelectorAll('.show-item[style=""], .show-item:not([style])').length;
+    const unit = getTranslation(lang, visible === 1 ? 'show' : 'shows');
+    countEl.innerHTML = `${visible} ${unit}`;
+  }
+}
+
+updatePageTranslations();
 </script>
 
 <style>

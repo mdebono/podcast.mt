@@ -1,8 +1,9 @@
 ---
 // src/layouts/Base.astro
 import '../styles/global.css';
+import { getTranslation } from '../lib/i18n.js';
 
-const { title = 'podcast.mt', description = 'Poddati minn Malta — the Maltese podcast directory', lang = 'en' } = Astro.props;
+const { title = 'podcast.mt', description = 'Poddati minn Malta — the Maltese podcast directory', lang = 'mt' } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://podcast.mt');
 ---
 <!doctype html>
@@ -34,14 +35,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://podcast.
       </a>
 
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="/shows">Shows</a>
-        <a href="/episodes">Episodes</a>
-        <a href="/submit">Submit</a>
-        <a href="/about">About</a>
+        <a href="/shows" data-i18n="shows">Podcasts</a>
+        <a href="/episodes" data-i18n="episodes">Episodi</a>
+        <a href="/submit" data-i18n="submit">Ibgħat</a>
+        <a href="/about" data-i18n="about">Dwar</a>
       </nav>
 
       <div class="nav-end">
-        <a href="/submit" class="nav-cta">+ Submit Show</a>
+        <button id="langSwitcher" class="nav-lang-btn" aria-label="Switch language">
+          {lang === 'mt' ? 'EN' : 'MT'}
+        </button>
+        <a href="/submit" class="nav-cta" data-i18n="submitShow">+ Ibgħat Podcast</a>
       </div>
     </div>
   </header>
@@ -64,19 +68,19 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://podcast.
 
       <nav class="footer-nav" aria-label="Footer navigation">
         <div class="footer-nav__col">
-          <strong>Discover</strong>
-          <a href="/shows">All Shows</a>
-          <a href="/episodes">Latest Episodes</a>
+          <strong data-i18n="discover">Skopri</strong>
+          <a href="/shows" data-i18n="shows">Podcasts</a>
+          <a href="/episodes" data-i18n="latestEpisodes">Episodi Riċenti</a>
         </div>
         <div class="footer-nav__col">
-          <strong>Creators</strong>
-          <a href="/submit">Submit a Show</a>
-          <a href="/about#badge">Get the Badge</a>
+          <strong data-i18n="creators">Kreaturi</strong>
+          <a href="/submit" data-i18n="submitShow">Ibgħat Podcast</a>
+          <a href="/about#badge" data-i18n="getBadge">Ikseb il-Badge</a>
         </div>
         <div class="footer-nav__col">
-          <strong>About</strong>
-          <a href="/about">About Us</a>
-          <a href="mailto:hello@podcast.mt">Contact</a>
+          <strong data-i18n="about">Dwar</strong>
+          <a href="/about" data-i18n="aboutUs">Dwarna</a>
+          <a href="mailto:hello@podcast.mt" data-i18n="contact">Kuntatt</a>
         </div>
       </nav>
     </div>
@@ -85,6 +89,40 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://podcast.
       <span class="footer-made">Made with ♥ in Malta 🇲🇹</span>
     </div>
   </footer>
+
+  <script>
+    import { getTranslation, getCurrentLang, setCurrentLang } from '../lib/i18n.js';
+
+    function updateLanguage() {
+      const lang = getCurrentLang();
+      document.documentElement.lang = lang;
+
+      // Update translations
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        el.textContent = getTranslation(lang, key);
+      });
+
+      // Update show descriptions
+      document.querySelectorAll('.show-card__desc').forEach(desc => {
+        const text = desc.dataset[`desc${lang.toUpperCase()}`] || desc.dataset.descEn;
+        desc.textContent = text?.slice(0, 100) + '…';
+      });
+    }
+
+    const langBtn = document.getElementById('langSwitcher');
+    if (langBtn) {
+      langBtn.addEventListener('click', () => {
+        const current = getCurrentLang();
+        const newLang = current === 'mt' ? 'en' : 'mt';
+        setCurrentLang(newLang);
+        updateLanguage();
+        langBtn.textContent = newLang === 'mt' ? 'EN' : 'MT';
+      });
+    }
+
+    updateLanguage();
+  </script>
 
 </body>
 </html>
@@ -151,6 +189,23 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://podcast.
   transition: background 0.2s, transform 0.15s;
 }
 .nav-cta:hover { background: #a8380a; transform: translateY(-1px); }
+
+.nav-lang-btn {
+  font-family: var(--ff-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--stone);
+  color: var(--cream);
+  padding: 8px 12px;
+  border-radius: var(--r-sm);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-right: 12px;
+}
+.nav-lang-btn:hover { background: var(--ink); }
 
 /* Footer */
 .site-footer {

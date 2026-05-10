@@ -30,8 +30,8 @@ const isMalti = lang.includes('mt');
     <h3 class="show-card__title">{show.name}</h3>
     {show.host && <p class="show-card__host">by {show.host}</p>}
 
-    <p class="show-card__desc">
-      {show.description?.en?.slice(0, 100)}…
+    <p class="show-card__desc" data-desc-en={show.description?.en} data-desc-mt={show.description?.mt}>
+      {(show.description?.mt || show.description?.en)?.slice(0, 100)}…
     </p>
 
     <div class="show-card__tags">

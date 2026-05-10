@@ -21,7 +21,8 @@ const isMalti = lang.includes('mt');
 
 <Base
   title={`${show.name} — podcast.mt`}
-  description={show.description?.en ?? show.description?.mt ?? ''}
+  description={show.description?.mt ?? show.description?.en ?? ''}
+  lang="mt"
 >
 
   <div class="show-page">
@@ -41,9 +42,9 @@ const isMalti = lang.includes('mt');
             <span class={`badge ${isMalti ? 'badge--lang-mt' : 'badge--lang'}`}>
               {langLabel(lang)}
             </span>
-            {show.featured && <span class="badge badge--feat">Featured</span>}
-            {isNew && <span class="badge badge--new">New episode</span>}
-            {show.origin === 'diaspora' && <span class="badge badge--tag">Diaspora</span>}
+            {show.featured && <span class="badge badge--feat" data-i18n="featured">Rrakkomandat</span>}
+            {isNew && <span class="badge badge--new" data-i18n="newEpisode">Episod ġdid</span>}
+            {show.origin === 'diaspora' && <span class="badge badge--tag" data-i18n="diaspora">Dijaspora</span>}
           </div>
 
           <h1 class="show-title">{show.name}</h1>
@@ -52,10 +53,9 @@ const isMalti = lang.includes('mt');
           )}
           {show.host && <p class="show-host">by {show.host}</p>}
 
-          <p class="show-desc">{show.description?.en}</p>
-          {show.description?.mt && (
-            <p class="show-desc show-desc--mt">{show.description.mt}</p>
-          )}
+          <p class="show-desc" data-desc-en={show.description?.en} data-desc-mt={show.description?.mt}>
+            {show.description?.mt ?? show.description?.en}
+          </p>
 
           <div class="show-tags">
             {show.tags?.map(t => <span class="badge badge--tag">{t}</span>)}
@@ -89,17 +89,17 @@ const isMalti = lang.includes('mt');
     <!-- Episodes -->
     <div class="container show-body">
       <section class="episodes-section">
-        <h2 class="episodes-title">Recent Episodes</h2>
+        <h2 class="episodes-title" data-i18n="recentEpisodes">Episodi Riċenti</h2>
         {episodes.length > 0
           ? <div class="episodes-list">
               {episodes.map(ep => <EpisodeRow episode={ep} showCover={false} />)}
             </div>
-          : <p class="no-episodes">No recent episodes found.</p>
+          : <p class="no-episodes" data-i18n="noEpisodes">Ma nstabet l-ebda episod riċent.</p>
         }
       </section>
 
       <!-- Back -->
-      <a href="/shows" class="back-link">← Back to all shows</a>
+      <a href="/shows" class="back-link" data-i18n="backToAllShows">← Lura għall-podcasts kollha</a>
     </div>
 
   </div>

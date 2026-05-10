@@ -12,44 +12,44 @@ const latest = getLatestEpisodes(6);
 const tags = getAllTags();
 ---
 
-<Base title="podcast.mt — Poddati minn Malta">
+<Base title="podcast.mt — Poddati minn Malta" lang="mt">
 
   <!-- ── Hero ── -->
   <section class="hero grain">
     <div class="container hero-inner">
       <div class="hero-text anim-fadeup">
-        <p class="hero-eyebrow">🎙 The Maltese Podcast Directory</p>
+        <p class="hero-eyebrow">🎙 Direttorju tal-Podcasts Maltin</p>
         <h1 class="hero-title">
           Poddati<br/>
           <em>minn Malta.</em>
         </h1>
-        <p class="hero-sub">
-          Discover podcasts from the Maltese islands — fil-Malti, bl-Ingliż, u aktar.
+        <p class="hero-sub" data-i18n="heroSub">
+          Skopri podcasts mill-gżejjer Maltin — fil-Malti, bl-Ingliż, u aktar.
         </p>
         <div class="hero-actions">
-          <a href="/shows" class="btn btn--primary">Browse All Shows</a>
-          <a href="/submit" class="btn btn--outline">Submit Your Show</a>
+          <a href="/shows" class="btn btn--primary" data-i18n="browseAllShows">Ara l-Podcasts Kollha</a>
+          <a href="/submit" class="btn btn--outline" data-i18n="submitYourShow">Ibgħat il-Podcast Tiegħek</a>
         </div>
         <div class="hero-stats">
-          <span><strong>{allShows.length}</strong> shows</span>
+          <span><strong>{allShows.length}</strong> <span data-i18n="shows">podcasts</span></span>
           <span class="stat-sep">·</span>
-          <span>Updated every 6 hours</span>
+          <span data-i18n="heroStatsUpdated">Aġġornat kull 6 sigħat</span>
           <span class="stat-sep">·</span>
-          <span>Free to list</span>
+          <span data-i18n="heroStatsFree">B’xejn biex tniżżel</span>
         </div>
       </div>
 
       {hero && (
         <a href={`/shows/${hero.slug}`} class="hero-feature anim-fadeup anim-fadeup-2">
           <div class="hero-feature__label">
-            <span class="badge badge--feat">Featured Show</span>
+            <span class="badge badge--feat" data-i18n="featured">Rrakkomandat</span>
           </div>
           {hero.coverArt && (
             <img class="hero-feature__art" src={hero.coverArt} alt={hero.name} width="260" height="260" />
           )}
           <div class="hero-feature__info">
             <h3>{hero.name}</h3>
-            {hero.host && <p>by {hero.host}</p>}
+            {hero.host && <p data-i18n="by">minn {hero.host}</p>}
           </div>
         </a>
       )}
@@ -60,8 +60,8 @@ const tags = getAllTags();
   <section class="section">
     <div class="container">
       <div class="section-head">
-        <h2 class="section-title">Latest Episodes</h2>
-        <a href="/episodes" class="section-more">See all →</a>
+        <h2 class="section-title" data-i18n="latestEpisodes">Episodi Riċenti</h2>
+        <a href="/episodes" class="section-more" data-i18n="seeAll">Ara kollha →</a>
       </div>
       <div class="episodes-list">
         {latest.map(ep => <EpisodeRow episode={ep} />)}
@@ -73,13 +73,13 @@ const tags = getAllTags();
   <section class="section section--tinted">
     <div class="container">
       <div class="section-head">
-        <h2 class="section-title">All Shows</h2>
-        <a href="/shows" class="section-more">Browse directory →</a>
+        <h2 class="section-title" data-i18n="allShows">Podcasts Kollha</h2>
+        <a href="/shows" class="section-more" data-i18n="browseDirectory">Esplora d-direttorju →</a>
       </div>
 
       <!-- Tag filter -->
       <div class="tag-filter" id="tagFilter">
-        <button class="tag-btn tag-btn--active" data-tag="all">All</button>
+        <button class="tag-btn tag-btn--active" data-i18n="all">Kollha</button>
         {tags.map(t => (
           <button class="tag-btn" data-tag={t}>{t}</button>
         ))}
@@ -99,36 +99,27 @@ const tags = getAllTags();
   <section class="cta-banner">
     <div class="container cta-inner">
       <div>
-        <h2>Got a podcast from Malta?</h2>
-        <p>List it here for free. Reach the Maltese audience looking for local content.</p>
+        <h2 data-i18n="gotPodcast">Għandek podcast minn Malta?</h2>
+        <p data-i18n="listHere">Niżżel hawn b’xejn. Laħħaq mal-udjenza Maltija li qed tfittex kontenut lokali.</p>
       </div>
-      <a href="/submit" class="btn btn--primary">Submit Your Show</a>
+      <a href="/submit" class="btn btn--primary" data-i18n="submitShow">Ibgħat il-Podcast Tiegħek</a>
     </div>
   </section>
 
 </Base>
 
-<!-- Tag filter script -->
 <script>
-const tagFilter = document.getElementById('tagFilter');
-const grid = document.getElementById('showsGrid');
+  import { getTranslation, getCurrentLang } from '../lib/i18n.js';
 
-tagFilter?.addEventListener('click', (e) => {
-  const btn = e.target.closest('.tag-btn');
-  if (!btn) return;
+  function updateTranslations() {
+    const lang = getCurrentLang();
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      el.textContent = getTranslation(lang, key);
+    });
+  }
 
-  tagFilter.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('tag-btn--active'));
-  btn.classList.add('tag-btn--active');
-
-  const tag = btn.dataset.tag;
-  grid?.querySelectorAll('.show-grid-item').forEach(item => {
-    if (tag === 'all' || item.dataset.tags?.split(',').includes(tag)) {
-      item.style.display = '';
-    } else {
-      item.style.display = 'none';
-    }
-  });
-});
+  updateTranslations();
 </script>
 
 <style>
