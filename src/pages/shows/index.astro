@@ -14,11 +14,9 @@ const english = shows.filter(s => !s.language?.includes('mt'));
 
   <section class="page-hero">
     <div class="container">
-      <p class="page-eyebrow" data-i18n="directory">Direttorju</p>
-      <h1 class="page-title" data-i18n="allShows">Podcasts Kollha</h1>
-      <p class="page-sub">{shows.length} <span data-i18n="shows">podcasts</span> minn, dwar, jew fil-gżejjer Maltin</p>
-    </div>
-  </section>
+          <p class="page-eyebrow" data-i18n="filters.directory">Direttorju</p>
+          <h1 class="page-title" data-i18n="sections.allShows">Podcasts Kollha</h1>
+          <p class="page-sub">{shows.length} <span data-i18n="misc.shows">podcasts</span> minn, dwar, jew fil-gżejjer Maltin</p>
 
   <section class="section">
     <div class="container">
@@ -26,18 +24,18 @@ const english = shows.filter(s => !s.language?.includes('mt'));
       <!-- Filters bar -->
       <div class="filters">
         <div class="filter-group">
-          <span class="filter-label" data-i18n="language">Lingwa</span>
+          <span class="filter-label" data-i18n="language.label">Lingwa</span>
           <div class="filter-btns" id="langFilter">
-            <button class="filter-btn filter-btn--active" data-i18n="all">Kollha</button>
-            <button class="filter-btn" data-lang="mt" data-i18n="maltese">Malti 🇲🇹</button>
-            <button class="filter-btn" data-lang="en" data-i18n="english">English</button>
-            <button class="filter-btn" data-lang="both" data-i18n="bilingual">Bilingwi</button>
+            <button class="filter-btn filter-btn--active" data-i18n="language.all">Kollha</button>
+            <button class="filter-btn" data-lang="mt" data-i18n="language.maltese">Malti 🇲🇹</button>
+            <button class="filter-btn" data-lang="en" data-i18n="language.english">English</button>
+            <button class="filter-btn" data-lang="both" data-i18n="language.bilingual">Bilingwi</button>
           </div>
         </div>
         <div class="filter-group">
-          <span class="filter-label" data-i18n="topic">Suġġett</span>
+          <span class="filter-label" data-i18n="filters.topic">Suġġett</span>
           <div class="filter-btns" id="tagFilter">
-            <button class="filter-btn filter-btn--active" data-i18n="all">Kollha</button>
+            <button class="filter-btn filter-btn--active" data-i18n="filters.all">Kollha</button>
             {tags.map(t => (
               <button class="filter-btn" data-tag={t}>{t}</button>
             ))}
@@ -47,7 +45,7 @@ const english = shows.filter(s => !s.language?.includes('mt'));
           <input
             type="search"
             id="searchInput"
-            data-i18n-placeholder="searchShows"
+            data-i18n-placeholder="filters.searchShows"
             placeholder="Fittex podcasts…"
             autocomplete="off"
             aria-label="Search shows"
@@ -56,7 +54,7 @@ const english = shows.filter(s => !s.language?.includes('mt'));
       </div>
 
       <!-- Results count -->
-      <p class="results-count" id="resultsCount">{shows.length} <span data-i18n="shows">podcasts</span></p>
+      <p class="results-count" id="resultsCount">{shows.length} <span data-i18n="misc.shows">podcasts</span></p>
 
       <!-- Grid -->
       <div class="shows-grid" id="showsGrid">
@@ -77,8 +75,8 @@ const english = shows.filter(s => !s.language?.includes('mt'));
         ))}
       </div>
 
-      <p class="no-results" id="noResults" style="display:none" data-i18n="noShowsFound">
-        Ma nstabet l-ebda podcast. <a href="/submit" data-i18n="knowOne">Xi ħaġa nieqsa?</a>
+      <p class="no-results" id="noResults" style="display:none" data-i18n="filters.noShowsFound">
+        Ma nstabet l-ebda podcast. <a href="/submit" data-i18n="filters.knowOne">Xi ħaġa nieqsa?</a>
       </p>
 
     </div>

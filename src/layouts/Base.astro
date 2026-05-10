@@ -35,17 +35,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://podcast.
       </a>
 
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="/shows" data-i18n="shows">Podcasts</a>
-        <a href="/episodes" data-i18n="episodes">Episodi</a>
-        <a href="/submit" data-i18n="submit">Ibgħat</a>
-        <a href="/about" data-i18n="about">Dwar</a>
+        <a href="/shows" data-i18n="nav.shows">Podcasts</a>
+        <a href="/episodes" data-i18n="nav.episodes">Episodi</a>
+        <a href="/submit" data-i18n="nav.submit">Ibgħat</a>
+        <a href="/about" data-i18n="nav.about">Dwar</a>
       </nav>
 
       <div class="nav-end">
         <button id="langSwitcher" class="nav-lang-btn" aria-label="Switch language">
           {lang === 'mt' ? 'EN' : 'MT'}
         </button>
-        <a href="/submit" class="nav-cta" data-i18n="submitShow">+ Ibgħat Podcast</a>
+        <a href="/submit" class="nav-cta" data-i18n="nav.submitShow">+ Ibgħat Podcast</a>
       </div>
     </div>
   </header>
@@ -68,19 +68,19 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://podcast.
 
       <nav class="footer-nav" aria-label="Footer navigation">
         <div class="footer-nav__col">
-          <strong data-i18n="discover">Skopri</strong>
-          <a href="/shows" data-i18n="shows">Podcasts</a>
-          <a href="/episodes" data-i18n="latestEpisodes">Episodi Riċenti</a>
+          <strong data-i18n="footer.discover">Skopri</strong>
+          <a href="/shows" data-i18n="nav.shows">Podcasts</a>
+          <a href="/episodes" data-i18n="sections.latestEpisodes">Episodi Riċenti</a>
         </div>
         <div class="footer-nav__col">
-          <strong data-i18n="creators">Kreaturi</strong>
-          <a href="/submit" data-i18n="submitShow">Ibgħat Podcast</a>
-          <a href="/about#badge" data-i18n="getBadge">Ikseb il-Badge</a>
+          <strong data-i18n="footer.creators">Kreaturi</strong>
+          <a href="/submit" data-i18n="nav.submitShow">Ibgħat Podcast</a>
+          <a href="/about#badge" data-i18n="footer.getBadge">Ikseb il-Badge</a>
         </div>
         <div class="footer-nav__col">
-          <strong data-i18n="about">Dwar</strong>
-          <a href="/about" data-i18n="aboutUs">Dwarna</a>
-          <a href="mailto:hello@podcast.mt" data-i18n="contact">Kuntatt</a>
+          <strong data-i18n="footer.aboutUs">Dwar</strong>
+          <a href="/about" data-i18n="footer.aboutUs">Dwarna</a>
+          <a href="mailto:hello@podcast.mt" data-i18n="footer.contact">Kuntatt</a>
         </div>
       </nav>
     </div>

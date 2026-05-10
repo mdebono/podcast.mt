@@ -42,9 +42,9 @@ const isMalti = lang.includes('mt');
             <span class={`badge ${isMalti ? 'badge--lang-mt' : 'badge--lang'}`}>
               {langLabel(lang)}
             </span>
-            {show.featured && <span class="badge badge--feat" data-i18n="featured">Rrakkomandat</span>}
-            {isNew && <span class="badge badge--new" data-i18n="newEpisode">Episod ġdid</span>}
-            {show.origin === 'diaspora' && <span class="badge badge--tag" data-i18n="diaspora">Dijaspora</span>}
+            {show.featured && <span class="badge badge--feat" data-i18n="misc.featured">Rrakkomandat</span>}
+            {isNew && <span class="badge badge--new" data-i18n="misc.newEpisode">Episod ġdid</span>}
+            {show.origin === 'diaspora' && <span class="badge badge--tag" data-i18n="misc.diaspora">Dijaspora</span>}
           </div>
 
           <h1 class="show-title">{show.name}</h1>
@@ -89,17 +89,17 @@ const isMalti = lang.includes('mt');
     <!-- Episodes -->
     <div class="container show-body">
       <section class="episodes-section">
-        <h2 class="episodes-title" data-i18n="recentEpisodes">Episodi Riċenti</h2>
+        <h2 class="episodes-title" data-i18n="sections.recentEpisodes">Episodi Riċenti</h2>
         {episodes.length > 0
           ? <div class="episodes-list">
               {episodes.map(ep => <EpisodeRow episode={ep} showCover={false} />)}
             </div>
-          : <p class="no-episodes" data-i18n="noEpisodes">Ma nstabet l-ebda episod riċent.</p>
+          : <p class="no-episodes" data-i18n="misc.noEpisodes">Ma nstabet l-ebda episod riċent.</p>
         }
       </section>
 
       <!-- Back -->
-      <a href="/shows" class="back-link" data-i18n="backToAllShows">← Lura għall-podcasts kollha</a>
+      <a href="/shows" class="back-link" data-i18n="misc.backToAllShows">← Lura għall-podcasts kollha</a>
     </div>
 
   </div>
