@@ -18,8 +18,8 @@ const tags = getAllTags();
   <section class="hero grain">
     <div class="container hero-inner">
       <div class="hero-text anim-fadeup">
-        <p class="hero-eyebrow">🎙 Direttorju tal-Podcasts Maltin</p>
-        <h1 class="hero-title">
+        <p class="hero-eyebrow" data-i18n="hero.eyebrow">🎙 Id-Direttorju tal-Podcasts Maltin</p>
+        <h1 class="hero-title" data-i18n-html="hero.title">
           Poddati<br/>
           <em>minn Malta.</em>
         </h1>
@@ -168,7 +168,13 @@ const tags = getAllTags();
 }
 .hero-title em {
   font-style: italic;
-  color: var(--sienna);
+  color: var(--sienna) !important;
+}
+
+/* Global rule to ensure em styling persists through runtime updates */
+:global(.hero-title em) {
+  font-style: italic;
+  color: var(--sienna) !important;
 }
 
 .hero-sub {

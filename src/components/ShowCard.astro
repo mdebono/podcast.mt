@@ -15,7 +15,7 @@ const isMalti = lang.includes('mt');
       ? <img src={show.coverArt} alt={show.name} width="120" height="120" loading="lazy" />
       : <div class="show-card__art-placeholder">🎙</div>
     }
-    {isNew && <span class="show-card__new-dot" title="New episode this week"></span>}
+    {isNew && <span class="show-card__new-dot" data-i18n-title="showCard.newEpisodeTitle" title="New episode this week"></span>}
   </div>
 
   <div class="show-card__body">
@@ -23,8 +23,8 @@ const isMalti = lang.includes('mt');
       <span class={`badge ${isMalti ? 'badge--lang-mt' : 'badge--lang'}`}>
         {langLabel(lang)}
       </span>
-      {show.featured && <span class="badge badge--feat">Featured</span>}
-      {isNew && <span class="badge badge--new">New</span>}
+      {show.featured && <span class="badge badge--feat" data-i18n="misc.featured">Featured</span>}
+      {isNew && <span class="badge badge--new" data-i18n="misc.new">New</span>}
     </div>
 
     <h3 class="show-card__title">{show.name}</h3>

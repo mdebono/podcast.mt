@@ -16,7 +16,7 @@ const english = shows.filter(s => !s.language?.includes('mt'));
     <div class="container">
           <p class="page-eyebrow" data-i18n="filters.directory">Direttorju</p>
           <h1 class="page-title" data-i18n="sections.allShows">Podcasts Kollha</h1>
-          <p class="page-sub">{shows.length} <span data-i18n="misc.shows">podcasts</span> minn, dwar, jew fil-gżejjer Maltin</p>
+          <p class="page-sub">{shows.length} <span data-i18n="misc.shows">podcasts</span> <span data-i18n="sections.directoryDescription">minn, dwar, jew fil-gżejjer Maltin</span></p>
 
   <section class="section">
     <div class="container">
@@ -46,9 +46,9 @@ const english = shows.filter(s => !s.language?.includes('mt'));
             type="search"
             id="searchInput"
             data-i18n-placeholder="filters.searchShows"
+            data-i18n-aria-label="filters.searchShows"
             placeholder="Fittex podcasts…"
             autocomplete="off"
-            aria-label="Search shows"
           />
         </div>
       </div>
@@ -75,8 +75,8 @@ const english = shows.filter(s => !s.language?.includes('mt'));
         ))}
       </div>
 
-      <p class="no-results" id="noResults" style="display:none" data-i18n="filters.noShowsFound">
-        Ma nstabet l-ebda podcast. <a href="/submit" data-i18n="filters.knowOne">Xi ħaġa nieqsa?</a>
+      <p class="no-results" id="noResults" style="display:none">
+        <span data-i18n="filters.noShowsFoundPrefix">Ma nstabet l-ebda podcast.</span> <a href="/submit" data-i18n="filters.knowOne">Xi ħaġa nieqsa?</a>
       </p>
 
     </div>
