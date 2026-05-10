@@ -7,9 +7,9 @@ import Base from '../layouts/Base.astro';
 
   <section class="page-hero">
     <div class="container">
-      <p class="page-eyebrow">For Creators</p>
-      <h1 class="page-title">Submit Your Show</h1>
-      <p class="page-sub">Listing on podcast.mt is free. We review every submission manually.</p>
+      <p class="page-eyebrow" data-i18n="submit.pageEyebrow">For Creators</p>
+      <h1 class="page-title" data-i18n="submit.pageTitle">Submit Your Show</h1>
+      <p class="page-sub" data-i18n="submit.pageSub">Listing on podcast.mt is free. We review every submission manually.</p>
     </div>
   </section>
 
@@ -17,59 +17,59 @@ import Base from '../layouts/Base.astro';
     <div class="container--narrow">
 
       <div class="criteria-box">
-        <h2>Who can submit?</h2>
+        <h2 data-i18n="submit.whoCanSubmitTitle">Who can submit?</h2>
         <ul>
-          <li>🇲🇹 Podcasts <strong>produced in Malta or Gozo</strong></li>
-          <li>🗣 Podcasts <strong>in the Maltese language</strong> (anywhere in the world)</li>
-          <li>🌍 Podcasts <strong>primarily about Malta</strong> by Maltese diaspora</li>
+          <li data-i18n="submit.bullet1">🇲🇹 Podcasts produced in Malta or Gozo</li>
+          <li data-i18n="submit.bullet2">🗣 Podcasts primarily in the Maltese language (anywhere in the world)</li>
+          <li data-i18n="submit.bullet3">🌍 Podcasts primarily about Malta, by Maltese diaspora creators</li>
         </ul>
-        <p class="criteria-note">Both active and archived shows are welcome. We list shows in English, Maltese, or both.</p>
+        <p class="criteria-note" data-i18n="submit.criteriaNote">Both active and archived shows are welcome. We list shows in English, Maltese, or both.</p>
       </div>
 
       <div class="form-card">
-        <h2 class="form-title">Show Details</h2>
+        <h2 class="form-title" data-i18n="submit.formDetailsTitle">Show Details</h2>
 
         <form class="submit-form" id="submitForm" novalidate>
 
           <div class="field-group">
-            <label for="showName">Show name <span class="req">*</span></label>
-            <input type="text" id="showName" name="showName" required placeholder="My Maltese Podcast" />
+            <label for="showName"><span data-i18n="submit.labelShowName">Show name</span> <span class="req">*</span></label>
+            <input type="text" id="showName" name="showName" required placeholder="My Maltese Podcast" data-i18n-placeholder="submit.placeholderShowName" />
           </div>
 
           <div class="field-group">
             <label for="rssUrl">
-              RSS feed URL <span class="req">*</span>
-              <span class="field-help">Where to find it: your hosting platform dashboard, or search on <a href="https://podcastindex.org" target="_blank" rel="noopener">podcastindex.org</a></span>
+              <span data-i18n="submit.labelRssUrl">RSS feed URL</span> <span class="req">*</span>
+              <span class="field-help" data-i18n="submit.fieldHelpRss">Where to find it: your hosting platform dashboard, or search on podcastindex.org</span>
             </label>
-            <input type="url" id="rssUrl" name="rssUrl" required placeholder="https://feeds.example.com/your-show.rss" />
+            <input type="url" id="rssUrl" name="rssUrl" required placeholder="https://feeds.example.com/your-show.rss" data-i18n-placeholder="submit.placeholderRssUrl" />
           </div>
 
           <div class="field-group">
-            <label for="language">Primary language <span class="req">*</span></label>
+            <label for="language"><span data-i18n="submit.labelLanguage">Primary language</span> <span class="req">*</span></label>
             <select id="language" name="language" required>
-              <option value="">Select…</option>
-              <option value="mt">Malti (Maltese)</option>
-              <option value="en">English</option>
-              <option value="both">Bilingual (MT + EN)</option>
+              <option value="" data-i18n="submit.optionSelect">Select…</option>
+              <option value="mt" data-i18n="submit.optionMT">Malti (Malti)</option>
+              <option value="en" data-i18n="submit.optionEN">English</option>
+              <option value="both" data-i18n="submit.optionBilingual">Bilingual (MT + EN)</option>
             </select>
           </div>
 
           <div class="field-row">
             <div class="field-group">
-              <label for="hostName">Host name(s)</label>
-              <input type="text" id="hostName" name="hostName" placeholder="Jane Borg" />
+              <label for="hostName" data-i18n="submit.labelHostName">Host name(s)</label>
+              <input type="text" id="hostName" name="hostName" placeholder="Jane Borg" data-i18n-placeholder="submit.placeholderHostName" />
             </div>
             <div class="field-group">
-              <label for="origin">Origin</label>
+              <label for="origin" data-i18n="submit.labelOrigin">Origin</label>
               <select id="origin" name="origin">
-                <option value="mt">Made in Malta / Gozo</option>
-                <option value="diaspora">Maltese diaspora</option>
+                <option value="mt" data-i18n="submit.optionOriginMT">Made in Malta / Gozo</option>
+                <option value="diaspora" data-i18n="submit.optionOriginDiaspora">Maltese diaspora</option>
               </select>
             </div>
           </div>
 
           <div class="field-group">
-            <label>Tags (select all that apply)</label>
+            <label data-i18n="submit.tagsLabel">Tags (select all that apply)</label>
             <div class="tag-checkboxes">
               {['news','culture','politics','comedy','sport','music','history','religion','business','education','technology','lifestyle'].map(tag => (
                 <label class="tag-check">
@@ -81,44 +81,42 @@ import Base from '../layouts/Base.astro';
           </div>
 
           <div class="field-group">
-            <label>Platform links</label>
+            <label data-i18n="submit.platformLinks">Platform links</label>
             <div class="platform-inputs">
-              <input type="url" name="spotifyUrl" placeholder="Spotify URL" />
-              <input type="url" name="appleUrl" placeholder="Apple Podcasts URL" />
-              <input type="url" name="webUrl" placeholder="Show website" />
+              <input type="url" name="spotifyUrl" placeholder="Spotify URL" data-i18n-placeholder="submit.placeholderSpotifyUrl" />
+              <input type="url" name="appleUrl" placeholder="Apple Podcasts URL" data-i18n-placeholder="submit.placeholderAppleUrl" />
+              <input type="url" name="webUrl" placeholder="Show website" data-i18n-placeholder="submit.placeholderWebUrl" />
             </div>
           </div>
 
           <div class="field-group">
-            <label for="descEn">Short description (English)</label>
-            <textarea id="descEn" name="descEn" rows="3" placeholder="A 1–2 sentence description of your show…" maxlength="300"></textarea>
+            <label for="descEn" data-i18n="submit.labelDescEn">Short description (English)</label>
+            <textarea id="descEn" name="descEn" rows="3" placeholder="A 1–2 sentence description of your show…" maxlength="300" data-i18n-placeholder="submit.placeholderDescEn"></textarea>
             <span class="char-count">0 / 300</span>
           </div>
 
           <div class="field-group">
-            <label for="descMt">Deskrizzjoni qasira (Malti) — optional</label>
-            <textarea id="descMt" name="descMt" rows="3" placeholder="Deskrizzjoni ta' 1–2 sentenzi tal-programm tiegħek…" maxlength="300"></textarea>
+            <label for="descMt" data-i18n="submit.labelDescMt">Short description (Maltese) — optional</label>
+            <textarea id="descMt" name="descMt" rows="3" placeholder="Deskrizzjoni ta' 1–2 sentenzi tal-programm tiegħek…" maxlength="300" data-i18n-placeholder="submit.placeholderDescMt"></textarea>
           </div>
 
           <div class="field-group">
-            <label for="contactEmail">Your email <span class="req">*</span></label>
-            <input type="email" id="contactEmail" name="contactEmail" required placeholder="you@example.com" />
-            <span class="field-help">Only used to confirm listing. Not published.</span>
+            <label for="contactEmail"><span data-i18n="submit.labelContactEmail">Your email</span> <span class="req">*</span></label>
+            <input type="email" id="contactEmail" name="contactEmail" required placeholder="you@example.com" data-i18n-placeholder="submit.placeholderContactEmail" />
+            <span class="field-help" data-i18n="submit.fieldHelpContact">Only used to confirm listing. Not published.</span>
           </div>
 
           <div class="form-footer">
-            <button type="submit" class="submit-btn" id="submitBtn">
-              Submit Show
-            </button>
-            <p class="form-note">We review submissions within a few days and will email you once listed.</p>
+            <button type="submit" class="submit-btn" id="submitBtn" data-i18n="submit.submitBtn">Submit Show</button>
+            <p class="form-note" data-i18n="submit.formNote">We review submissions within a few days and will email you once your show is listed.</p>
           </div>
 
         </form>
 
         <div class="success-msg" id="successMsg" style="display:none">
           <span class="success-icon">✅</span>
-          <h3>Grazzi! / Thank you!</h3>
-          <p>We've received your submission and will review it shortly. We'll email you once your show is listed.</p>
+          <h3 data-i18n="submit.successTitle">Thank you!</h3>
+          <p data-i18n="submit.successText">We've received your submission and will review it shortly. We'll email you once your show is listed.</p>
         </div>
       </div>
 
