@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "example-malta-show",
+    "name": "Example Malta Show",
+    "nameMt": "Eżempju ta' Programm Malti",
+    "description": {
+      "en": "An example podcast from Malta covering local topics.",
+      "mt": "Eżempju ta' podcast minn Malta li jkopri suġġetti lokali."
+    },
+    "rssUrl": "https://feeds.buzzsprout.com/example.rss",
+    "language": ["en"],
+    "tags": ["culture", "news"],
+    "host": "Joe Borg",
+    "origin": "mt",
+    "links": {
+      "spotify": "https://open.spotify.com/show/example",
+      "apple": "https://podcasts.apple.com/mt/podcast/example",
+      "web": "https://example.com"
+    },
+    "featured": false,
+    "active": true
+  }
+]
