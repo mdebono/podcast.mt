@@ -1,8 +1,11 @@
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
+import vercel from '@astrojs/vercel/static';
 
 export default defineConfig({
   site: 'https://podcast.mt',
-  // No adapters needed — fully static output
   output: 'static',
+  adapter: vercel({
+    webAnalytics: { enabled: true },
+  }),
 });
