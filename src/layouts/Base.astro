@@ -93,6 +93,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://podcast.
   <script>
     import { getTranslation, getCurrentLang, setCurrentLang } from '../lib/i18n.js';
 
+    let heroRotationTimer;
+
     function updateLanguage() {
       const lang = getCurrentLang();
       document.documentElement.lang = lang;
@@ -108,9 +110,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://podcast.
         const key = el.dataset.i18nHtml;
         el.innerHTML = getTranslation(lang, key);
       });
-
-      // Start rotating hero title if it exists
-      startHeroTitleRotation();
 
       // Update placeholders
       document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
@@ -159,18 +158,27 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://podcast.
       
       if (!Array.isArray(rotatingTexts) || rotatingTexts.length === 0) return;
 
-      let currentIndex = 0;
-      
+      if (heroRotationTimer) {
+        clearInterval(heroRotationTimer);
+      }
+
+      let currentIndex = 1;
+      const emElement = heroTitle.querySelector('em');
+      if (emElement) {
+        emElement.textContent = rotatingTexts[0];
+        emElement.style.animation = 'none';
+        void emElement.offsetWidth;
+        emElement.style.animation = '';
+      }
+
       const rotateText = () => {
-        const emElement = heroTitle.querySelector('em');
-        if (emElement) {
-          emElement.textContent = rotatingTexts[currentIndex];
-          currentIndex = (currentIndex + 1) % rotatingTexts.length;
-        }
+        if (!emElement) return;
+        emElement.textContent = rotatingTexts[currentIndex];
+        currentIndex = (currentIndex + 1) % rotatingTexts.length;
       };
 
       // Start rotation every 10 seconds
-      setInterval(rotateText, 10000);
+      heroRotationTimer = setInterval(rotateText, 10000);
     }
 
     const langBtn = document.getElementById('langSwitcher');
