@@ -66,6 +66,9 @@ const parser = new XMLParser({
   ignoreAttributes: false,
   attributeNamePrefix: '@_',
   allowBooleanAttributes: true,
+  processEntities: false, // Disable entity processing to avoid expansion limits
+  ignoreNameSpace: false,
+  allowXXE: false,
 });
 
 /**
