@@ -19,5 +19,26 @@
     },
     "featured": false,
     "active": true
+  },
+  {
+    "slug": "il-podcast-tal-parlament",
+    "name": "Il-Podcast tal-Parlament",
+    "nameMt": "Il-Podcast tal-Parlament",
+    "description": {
+      "en": "",
+      "mt": "Dan il-Podcast huwa ġabra inuffiċjali tas-seduti tal-Parlament ta' Malta. Is-seduti jiġu ppublikati hawn il-ġurnata ta' wara li jseħħu. Għal aktar informazzjoni, żur is-sit ta' dan il-podcast."
+    },
+    "rssUrl": "https://parlament.podcast.mt/rss/podcast.rss",
+    "language": ["mt"],
+    "tags": ["politics", "news"],
+    "host": "Il-Parlament ta' Malta",
+    "origin": "mt",
+    "links": {
+      "spotify": "https://open.spotify.com/show/41wjGno413H9zT7NEJZxs6",
+      "apple": "https://podcasts.apple.com/us/podcast/il-podcast-tal-parlament/id1657492240",
+      "web": "https://parlament.podcast.mt"
+    },
+    "featured": true,
+    "active": true
   }
 ]
