@@ -63,7 +63,7 @@ import Base from '../layouts/Base.astro';
               <select id="origin" name="origin">
                 <option value="mt" data-i18n="submit.optionOriginMT">Made in Malta</option>
                 <option value="gozo" data-i18n="submit.optionOriginGozo">Made in Gozo</option>
-                <option value="X" data-i18n="submit.optionOriginX">Made abroad</option>
+                <option value="x" data-i18n="submit.optionOriginX">Made abroad</option>
               </select>
             </div>
           </div>
@@ -134,7 +134,7 @@ document.getElementById('descEn')?.addEventListener('input', function() {
 
 // Form submission — sends to Formspree or your own endpoint
 // Replace ACTION_URL with your Formspree endpoint or a serverless function
-const FORM_ACTION = 'https://formspree.io/f/YOUR_FORM_ID';
+const FORM_ACTION = 'https://formspree.io/f/mykolgyo';
 
 document.getElementById('submitForm')?.addEventListener('submit', async (e) => {
   e.preventDefault();
