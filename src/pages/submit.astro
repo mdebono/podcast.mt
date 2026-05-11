@@ -20,8 +20,7 @@ import Base from '../layouts/Base.astro';
         <h2 data-i18n="submit.whoCanSubmitTitle">Who can submit?</h2>
         <ul>
           <li data-i18n="submit.bullet1">🇲🇹 Podcasts produced in Malta or Gozo</li>
-          <li data-i18n="submit.bullet2">🗣 Podcasts primarily in the Maltese language (anywhere in the world)</li>
-          <li data-i18n="submit.bullet3">🌍 Podcasts primarily about Malta, by Maltese diaspora creators</li>
+          <li data-i18n="submit.bullet2">🗣 Podcasts primarily in the Maltese language</li>
         </ul>
         <p class="criteria-note" data-i18n="submit.criteriaNote">Both active and archived shows are welcome. We list shows in English, Maltese, or both.</p>
       </div>
@@ -62,8 +61,9 @@ import Base from '../layouts/Base.astro';
             <div class="field-group">
               <label for="origin" data-i18n="submit.labelOrigin">Origin</label>
               <select id="origin" name="origin">
-                <option value="mt" data-i18n="submit.optionOriginMT">Made in Malta / Gozo</option>
-                <option value="diaspora" data-i18n="submit.optionOriginDiaspora">Maltese diaspora</option>
+                <option value="mt" data-i18n="submit.optionOriginMT">Made in Malta</option>
+                <option value="gozo" data-i18n="submit.optionOriginGozo">Made in Gozo</option>
+                <option value="X" data-i18n="submit.optionOriginX">Made abroad</option>
               </select>
             </div>
           </div>
