@@ -13,6 +13,12 @@ const translations = {
     },
     hero: {
       title: 'Poddati<br/><em>minn Malta.</em>',
+      titleRotating: [
+        'minn Malta.',
+        'Maltin.',
+        'minn Għawdex.',
+        'bil-Malti.',
+      ],
       eyebrow: '🎙 Id-Direttorju tal-Podcasts Maltin',
       sub: 'Skopri podcasts mill-gżejjer Maltin — bil-Malti, bl-Ingliż, u aktar.',
       stats: {
@@ -170,6 +176,12 @@ const translations = {
     },
     hero: {
       title: 'Podcasts<br/><em>from Malta.</em>',
+      titleRotating: [
+        'from Malta.',
+        'in Maltese.',
+        'from Gozo.',
+        'that are Maltese.',
+      ],
       eyebrow: '🎙 The Maltese podcast directory',
       sub: 'Discover podcasts from the Maltese islands — in Maltese, English, and more.',
       stats: {
@@ -323,10 +335,10 @@ function getNestedTranslation(lang, key) {
 
 export function getTranslation(lang, key) {
   const value = getNestedTranslation(lang, key);
-  if (typeof value === 'string') return value;
+  if (typeof value === 'string' || Array.isArray(value)) return value;
 
   const fallback = getNestedTranslation('en', key);
-  return typeof fallback === 'string' ? fallback : key;
+  return (typeof fallback === 'string' || Array.isArray(fallback)) ? fallback : key;
 }
 
 export function getCurrentLang() {

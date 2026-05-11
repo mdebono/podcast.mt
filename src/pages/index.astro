@@ -175,6 +175,17 @@ const tags = getAllTags();
 :global(.hero-title em) {
   font-style: italic;
   color: var(--sienna) !important;
+  animation: highlight-fade 10s ease-out infinite;
+}
+
+@keyframes highlight-fade {
+  0%, 5% {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  10%, 100% {
+    background-color: transparent;
+  }
 }
 
 .hero-sub {
