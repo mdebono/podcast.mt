@@ -1,21 +1,35 @@
 [
   {
-    "slug": "example-malta-show",
-    "name": "Example Malta Show",
-    "nameMt": "Eżempju ta' Programm Malti",
-    "description": {
-      "en": "An example podcast from Malta covering local topics.",
-      "mt": "Eżempju ta' podcast minn Malta li jkopri suġġetti lokali."
-    },
-    "rssUrl": "https://sample-feeds.rowanmanning.com/examples/252e034a6870a2a1e1580f8dd148c795/feed.xml",
-    "language": ["en"],
-    "tags": ["culture", "news"],
-    "host": "Joe Borg",
+    "slug": "jon-mallia-podcast",
+    "name": "Jon Mallia Podcast",
+    "nameMt": "Il-Podcast ta' Jon",
+    "description": { "en": "", "mt": "" },
+    "rssUrl": "https://anchor.fm/s/53bc2b60/podcast/rss",
+    "spotifyId": "21VktFAh3Ghs7PuLrle31o",
+    "language": ["mt"],
+    "tags": ["culture", "politics", "society"],
+    "host": "Jon Mallia",
     "origin": "mt",
     "links": {
-      "spotify": "https://open.spotify.com/show/example",
-      "apple": "https://podcasts.apple.com/mt/podcast/example",
-      "web": "https://example.com"
+      "spotify": "https://open.spotify.com/show/21VktFAh3Ghs7PuLrle31o",
+      "web": "https://jonmallia.mt"
+    },
+    "featured": false,
+    "active": true
+  },
+  {
+    "slug": "il-kazin",
+    "name": "Il-Każin",
+    "nameMt": "Il-Każin",
+    "description": { "en": "", "mt": "" },
+    "rssUrl": null,
+    "spotifyId": "1YEgsAQy3wy4ZWSknivz2B",
+    "language": ["mt"],
+    "tags": [],
+    "host": "Il-Każin",
+    "origin": "mt",
+    "links": {
+      "spotify": "https://open.spotify.com/show/1YEgsAQy3wy4ZWSknivz2B"
     },
     "featured": false,
     "active": true
@@ -24,21 +38,105 @@
     "slug": "il-podcast-tal-parlament",
     "name": "Il-Podcast tal-Parlament",
     "nameMt": "Il-Podcast tal-Parlament",
-    "description": {
-      "en": "",
-      "mt": "Dan il-Podcast huwa ġabra inuffiċjali tas-seduti tal-Parlament ta' Malta. Is-seduti jiġu ppublikati hawn il-ġurnata ta' wara li jseħħu. Għal aktar informazzjoni, żur is-sit ta' dan il-podcast."
-    },
+    "description": { "en": "", "mt": "" },
     "rssUrl": "https://parlament.podcast.mt/rss/podcast.rss",
+    "spotifyId": "41wjGno413H9zT7NEJZxs6",
     "language": ["mt"],
     "tags": ["politics", "news"],
     "host": "Il-Parlament ta' Malta",
     "origin": "mt",
     "links": {
       "spotify": "https://open.spotify.com/show/41wjGno413H9zT7NEJZxs6",
-      "apple": "https://podcasts.apple.com/us/podcast/il-podcast-tal-parlament/id1657492240",
       "web": "https://parlament.podcast.mt"
     },
-    "featured": true,
+    "featured": false,
+    "active": true
+  },
+  {
+    "slug": "il-hass-mal-bass",
+    "name": "Il-Ħass mal-Bass",
+    "nameMt": "Il-Ħass mal-Bass",
+    "description": { "en": "", "mt": "" },
+    "rssUrl": "https://anchor.fm/s/f5a18c90/podcast/rss",
+    "spotifyId": "3dxgY3UVDalGX5N1Grqtu5",
+    "language": ["mt"],
+    "tags": [],
+    "host": "Kurt u Sarah",
+    "origin": "mt",
+    "links": {
+      "spotify": "https://open.spotify.com/show/3dxgY3UVDalGX5N1Grqtu5"
+    },
+    "featured": false,
+    "active": true
+  },
+  {
+    "slug": "bajd-u-bejken",
+    "name": "Bajd u Bejken",
+    "nameMt": "Bajd u Bejken",
+    "description": { "en": "", "mt": "" },
+    "rssUrl": null,
+    "spotifyId": "0nL1JzNXI5UsM4VnUVzgTv",
+    "language": ["mt"],
+    "tags": [],
+    "host": "SandMax24 u JD Patrick",
+    "origin": "mt",
+    "links": {
+      "spotify": "https://open.spotify.com/show/0nL1JzNXI5UsM4VnUVzgTv",
+      "web": "https://bajdubejken.com"
+    },
+    "featured": false,
+    "active": true
+  },
+  {
+    "slug": "maltatoday",
+    "name": "MaltaToday",
+    "nameMt": null,
+    "description": { "en": "", "mt": "" },
+    "rssUrl": null,
+    "spotifyId": "3mXqlq3Dr7aEN3iuIGtb4Q",
+    "language": ["en"],
+    "tags": ["news"],
+    "host": "MaltaToday",
+    "origin": "mt",
+    "links": {
+      "spotify": "https://open.spotify.com/show/3mXqlq3Dr7aEN3iuIGtb4Q"
+    },
+    "featured": false,
+    "active": true
+  },
+  {
+    "slug": "the-she-word",
+    "name": "The SHE Word",
+    "nameMt": null,
+    "description": { "en": "", "mt": "" },
+    "rssUrl": "https://media.rss.com/theinterviewer/feed.xml",
+    "spotifyId": "1gz6YeNVeQicM9enj1xN6K",
+    "language": ["en"],
+    "tags": [],
+    "host": "Trudy Kerr",
+    "origin": "mt",
+    "links": {
+      "spotify": "https://open.spotify.com/show/1gz6YeNVeQicM9enj1xN6K"
+    },
+    "featured": false,
+    "active": true
+  },
+  {
+    "slug": "timestalk",
+    "name": "TimesTalk",
+    "nameMt": null,
+    "description": { "en": "", "mt": "" },
+    "rssUrl": "https://feeds.captivate.fm/times-talk-times-of-malta/",
+    "spotifyId": "5SGnnhdk6VfZ5Xlq2O347z",
+    "language": ["en"],
+    "tags": ["news"],
+    "host": "Times of Malta",
+    "origin": "mt",
+    "links": {
+      "spotify": "https://open.spotify.com/show/5SGnnhdk6VfZ5Xlq2O347z",
+      "web": "https://timesofmalta.com/news/timestalk"
+    },
+    "featured": false,
     "active": true
   }
 ]
