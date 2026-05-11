@@ -90,6 +90,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://podcast.
     </div>
   </footer>
 
+  <!-- Audio player -->
+  <audio id="audioPlayer" preload="none" style="display: none;"></audio>
+
   <script>
     import { getTranslation, getCurrentLang, setCurrentLang } from '../lib/i18n.js';
 
@@ -193,6 +196,70 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://podcast.
     }
 
     updateLanguage();
+
+    // Audio player functionality
+    const audioPlayer = document.getElementById('audioPlayer');
+    let currentPlayingBtn = null;
+
+    // Handle play button clicks
+    document.addEventListener('click', (e) => {
+      if (e.target.classList.contains('play-btn')) {
+        const btn = e.target;
+        const audioUrl = btn.dataset.audio;
+        const title = btn.dataset.title;
+
+        if (!audioUrl) return;
+
+        // If this button is already playing, pause it
+        if (currentPlayingBtn === btn && !audioPlayer.paused) {
+          audioPlayer.pause();
+          updatePlayButton(btn, false);
+          currentPlayingBtn = null;
+          return;
+        }
+
+        // Stop any currently playing audio
+        if (currentPlayingBtn && currentPlayingBtn !== btn) {
+          updatePlayButton(currentPlayingBtn, false);
+        }
+
+        // Load and play new audio
+        audioPlayer.src = audioUrl;
+        audioPlayer.load();
+        audioPlayer.play().then(() => {
+          updatePlayButton(btn, true);
+          currentPlayingBtn = btn;
+        }).catch(err => {
+          console.error('Error playing audio:', err);
+        });
+      }
+    });
+
+    // Handle audio end
+    audioPlayer.addEventListener('ended', () => {
+      if (currentPlayingBtn) {
+        updatePlayButton(currentPlayingBtn, false);
+        currentPlayingBtn = null;
+      }
+    });
+
+    // Handle audio pause (from controls or other sources)
+    audioPlayer.addEventListener('pause', () => {
+      if (currentPlayingBtn) {
+        updatePlayButton(currentPlayingBtn, false);
+        currentPlayingBtn = null;
+      }
+    });
+
+    function updatePlayButton(btn, isPlaying) {
+      if (isPlaying) {
+        btn.textContent = '⏸';
+        btn.setAttribute('aria-label', `Pause: ${btn.dataset.title}`);
+      } else {
+        btn.textContent = '▶';
+        btn.setAttribute('aria-label', `Play: ${btn.dataset.title}`);
+      }
+    }
   </script>
 
 </body>
