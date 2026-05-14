@@ -1,5 +1,21 @@
 [
   {
+    "showSlug": "the-she-word",
+    "guid": "cb968e26-4b77-48bf-907b-f72fdabcdfde",
+    "title": "The SHE Warriors - Miriana Conte - The Woman Behind Malta's Most Controversal and Celebrated Icon",
+    "description": "Miriana Conte is the fantastically flamboyant and often outrageous personality behind one of Malta’s most controversial Eurovision entries, which had gone viral all over the world even before she had won the national competition. ‘Serving Kant’ caused outcry in the UK particularly due to the play on",
+    "pubDate": "Thu, 14 May 2026 06:30:00 GMT",
+    "pubDateIso": "2026-05-14T06:30:00.000Z",
+    "durationSeconds": 4965,
+    "audioUrl": "https://content.rss.com/episodes/18823/2820375/theinterviewer/2026_05_13_16_28_33_01dc7a8e-4fea-47a5-868e-8abb7a41f8b4.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://rss.com/podcasts/theinterviewer/2820375",
+    "episodeNumber": 8,
+    "season": 22,
+    "imageUrl": "https://media.rss.com/theinterviewer/ep_cover_20260513_040530_65082d6ff1e6e8cfc6043e1c3871fd08.png",
+    "explicit": false
+  },
+  {
     "showSlug": "jon-mallia-podcast",
     "guid": "b80fe15f-05de-4008-a001-5299f6ded7f0",
     "title": "NIBQGĦU NKEJLU S-SUĊĊESS BIN-NUMRI | Marisa Xuereb",
@@ -301,22 +317,6 @@
     "episodeNumber": 36,
     "season": 2,
     "imageUrl": "https://artwork.captivate.fm/cc52e0a4-4276-4a77-9a1a-8e9d77bdcb82/TIMES-TALK-11-Thumbnail-2.png",
-    "explicit": false
-  },
-  {
-    "showSlug": "the-she-word",
-    "guid": "321f3e9f-3ebb-4212-818d-2bf01c3f1e1c",
-    "title": "SHE WARRIORS - Marina Mazepa, the story of one woman overcoming every challenge to follow her dreams",
-    "description": "Marina Mazepa is an actress, a dancer, a contortionists, a choreographer, a model and an artist. Ukrainian Marina knew as a child that she wanted to be famous, she wanted to perform and be the very best that she could be. As a young women Marina won scholarships, competitions, dance events, and then",
-    "pubDate": "Thu, 15 Jan 2026 09:01:06 GMT",
-    "pubDateIso": "2026-01-15T09:01:06.000Z",
-    "durationSeconds": 2797,
-    "audioUrl": "https://content.rss.com/episodes/18823/2461675/theinterviewer/2026_01_15_09_00_28_6c02adec-8593-46a3-b764-f405da314348.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://rss.com/podcasts/theinterviewer/2461675",
-    "episodeNumber": 5,
-    "season": 22,
-    "imageUrl": "https://media.rss.com/theinterviewer/ep_cover_20260115_080152_a04b511b9b832c2e564936d3b6b3b339.png",
     "explicit": false
   },
   {
