@@ -1,5 +1,21 @@
 [
   {
+    "showSlug": "timestalk",
+    "guid": "b53961ab-a06b-4eff-b878-3c8183f9f009",
+    "title": "Times Talk - Entitled voters, shackled leaders",
+    "description": "It is very worrying the the election campaign has, so far, almost entirely revolved around 'what's in it for me', according to political analysts Lou Bondi and Michelle Attard Tonna.The two were speaking on the latest episode of Times Talk Campaign Watch during which they dissected the third week of",
+    "pubDate": "Sat, 16 May 2026 06:00:00 +0200",
+    "pubDateIso": "2026-05-16T04:00:00.000Z",
+    "durationSeconds": 3534,
+    "audioUrl": "https://episodes.captivate.fm/episode/b53961ab-a06b-4eff-b878-3c8183f9f009.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
+    "episodeNumber": 41,
+    "season": 2,
+    "imageUrl": "https://artwork.captivate.fm/4cd86d00-a9b5-4b07-88b5-7777bfea1151/Spotify.jpeg",
+    "explicit": false
+  },
+  {
     "showSlug": "the-she-word",
     "guid": "cb968e26-4b77-48bf-907b-f72fdabcdfde",
     "title": "The SHE Warriors - Miriana Conte - The Woman Behind Malta's Most Controversal and Celebrated Icon",
@@ -221,22 +237,6 @@
     "episodeNumber": 7,
     "season": 22,
     "imageUrl": "https://media.rss.com/theinterviewer/ep_cover_20260317_120329_f10b3dcca3921c5f67a02dc6146e190b.png",
-    "explicit": false
-  },
-  {
-    "showSlug": "timestalk",
-    "guid": "7d7eb341-2806-4827-9ce2-f865d1308766",
-    "title": "Times Talk: A tanker adrift",
-    "description": "There is a Russian oil tanker adrift about 100km to the South East of Malta right now.Its crew abandoned it two weeks ago after it was hit by a huge explosion.Russia hasn't come to pick it up and no country - including Malta - will touch it.Still though, all eyes are on it, as it is loaded with some",
-    "pubDate": "Wed, 18 Mar 2026 09:00:00 +0200",
-    "pubDateIso": "2026-03-18T07:00:00.000Z",
-    "durationSeconds": 1092,
-    "audioUrl": "https://episodes.captivate.fm/episode/7d7eb341-2806-4827-9ce2-f865d1308766.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
-    "episodeNumber": 36,
-    "season": 2,
-    "imageUrl": "https://artwork.captivate.fm/cc52e0a4-4276-4a77-9a1a-8e9d77bdcb82/TIMES-TALK-11-Thumbnail-2.png",
     "explicit": false
   },
   {
