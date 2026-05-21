@@ -1,5 +1,21 @@
 [
   {
+    "showSlug": "jon-mallia-podcast",
+    "guid": "800138cc-b040-4523-8dff-a92bc9c62a57",
+    "title": "L-ELEZZJONI ĠENERALI | Live mal-Patruni",
+    "description": "&lt;p&gt;X&#39;sinjal qed jingħata dwar id-direzzjoni li fih se jmur il-pajjiż? Niddiskutu jien, Robert Formosa u David Grech.&lt;br&gt;Dan il-kontenut ġie mxandar LIVE nhar it-12 ta&#39; Mejju 2026.&lt;br&gt;Segwi l-KAŻIN li jmiss ma&#39; Alex Borg u Robert Abela nhar il-25 ta&#39; Mejju fid-9PM ha",
+    "pubDate": "Thu, 21 May 2026 19:00:01 GMT",
+    "pubDateIso": "2026-05-21T19:00:01.000Z",
+    "durationSeconds": 4634,
+    "audioUrl": "https://anchor.fm/s/53bc2b60/podcast/play/120334525/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-21%2F424614700-44100-2-78694fd5cd614.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://podcasters.spotify.com/pod/show/jonmallia/episodes/L-ELEZZJONI-ENERALI--Live-mal-Patruni-e3jmqnt",
+    "episodeNumber": null,
+    "season": null,
+    "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/13948408/13948408-1645521893673-90bbcf0399d1e.jpg",
+    "explicit": false
+  },
+  {
     "showSlug": "timestalk",
     "guid": "d42f9342-6256-4b50-9e24-fcddd94f766e",
     "title": "Times Talk - Are election polls lying to us?",
@@ -189,22 +205,6 @@
     "episodeNumber": 38,
     "season": 2,
     "imageUrl": "https://artwork.captivate.fm/732e92e1-d9b9-4b67-9f0b-938b17b17666/Times-Talk-Try-3-1-jpg.jpeg",
-    "explicit": false
-  },
-  {
-    "showSlug": "jon-mallia-podcast",
-    "guid": "7169a1c1-f3f0-4ab6-8e39-bd34e710cb93",
-    "title": "BITCOIN IS NOT THE CURRENCY OF CRIMINALS | Joshua Ellul",
-    "description": "&lt;p&gt;Il-Crypto, il-Bitcoin u l-Blockchain qajla niddiskutuhom f&#39;Malta. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Għalhekk f&#39;din il-konverżazzjoni mal-ħabib antik tiegħi Joshua nistaqsi dwar x&#39;inhuma, l-evoluzzjoni tagħhom u għalfejn jeżistu fost bosta affarijiet oħra.&lt;/p&gt;",
-    "pubDate": "Tue, 21 Apr 2026 19:00:00 GMT",
-    "pubDateIso": "2026-04-21T19:00:00.000Z",
-    "durationSeconds": 5921,
-    "audioUrl": "https://anchor.fm/s/53bc2b60/podcast/play/118753584/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-3-20%2F422464377-44100-2-947c81c1f2ee8.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://podcasters.spotify.com/pod/show/jonmallia/episodes/BITCOIN-IS-NOT-THE-CURRENCY-OF-CRIMINALS--Joshua-Ellul-e3i6irg",
-    "episodeNumber": null,
-    "season": null,
-    "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/13948408/13948408-1645521893673-90bbcf0399d1e.jpg",
     "explicit": false
   },
   {
