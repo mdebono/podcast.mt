@@ -1,6 +1,22 @@
 [
   {
     "showSlug": "timestalk",
+    "guid": "d42f9342-6256-4b50-9e24-fcddd94f766e",
+    "title": "Times Talk - Are election polls lying to us?",
+    "description": "With just over a week remaining before Maltese voters head to the polls to choose Malta's next prime minister, the latest episode of&nbsp;Times Talk&nbsp;delves into the science and controversy behind political polling, as current surveys continue to indicate a significant lead for the Labour Party.",
+    "pubDate": "Thu, 21 May 2026 06:00:00 +0200",
+    "pubDateIso": "2026-05-21T04:00:00.000Z",
+    "durationSeconds": 2498,
+    "audioUrl": "https://episodes.captivate.fm/episode/d42f9342-6256-4b50-9e24-fcddd94f766e.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
+    "episodeNumber": 42,
+    "season": 2,
+    "imageUrl": "https://artwork.captivate.fm/5f573b26-83d6-45a0-b94d-f217b07c447b/Spotify.jpeg",
+    "explicit": false
+  },
+  {
+    "showSlug": "timestalk",
     "guid": "b53961ab-a06b-4eff-b878-3c8183f9f009",
     "title": "Times Talk - Entitled voters, shackled leaders",
     "description": "It is very worrying the the election campaign has, so far, almost entirely revolved around 'what's in it for me', according to political analysts Lou Bondi and Michelle Attard Tonna.The two were speaking on the latest episode of Times Talk Campaign Watch during which they dissected the third week of",
@@ -173,22 +189,6 @@
     "episodeNumber": 38,
     "season": 2,
     "imageUrl": "https://artwork.captivate.fm/732e92e1-d9b9-4b67-9f0b-938b17b17666/Times-Talk-Try-3-1-jpg.jpeg",
-    "explicit": false
-  },
-  {
-    "showSlug": "timestalk",
-    "guid": "a70204a9-192f-46d8-b907-7cfe53a8a17a",
-    "title": "The controversy: Bil-Malti or in English?",
-    "description": "Broadcaster Peppi Azzopardi said he learned English as a young boy because the school he went to forced students to wear a sign around their neck that read: ‘I must speak in English’.And while he admitted the sign was demeaning, he insisted that it propelled him to learn English, as his parents did ",
-    "pubDate": "Sat, 25 Apr 2026 06:00:00 +0200",
-    "pubDateIso": "2026-04-25T04:00:00.000Z",
-    "durationSeconds": 3078,
-    "audioUrl": "https://episodes.captivate.fm/episode/a70204a9-192f-46d8-b907-7cfe53a8a17a.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
-    "episodeNumber": 37,
-    "season": 2,
-    "imageUrl": "https://artwork.captivate.fm/efdacbbb-dbcd-470f-98c9-391e3ac04103/Times-Talk-Try-3-jpg.jpeg",
     "explicit": false
   },
   {
