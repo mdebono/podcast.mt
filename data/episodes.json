@@ -1,5 +1,21 @@
 [
   {
+    "showSlug": "the-she-word",
+    "guid": "75e00277-6a69-46f0-90ae-e056bb2bf9a6",
+    "title": "The SHE Word Special: Everything You Wanted To Know About The Opposite Sex - Part Three - Trudy's Questions",
+    "description": "Time for Trudy to take the helm and pitch the questions in the third part of this mini series special where The SHE Word brings you a lighthearted look at what women and men really think about the things that are important. In this episode Trudy grills the men on their bathroom habits, asks if men r",
+    "pubDate": "Thu, 28 May 2026 13:30:02 GMT",
+    "pubDateIso": "2026-05-28T13:30:02.000Z",
+    "durationSeconds": 1573,
+    "audioUrl": "https://content.rss.com/episodes/18823/2865748/theinterviewer/2026_05_28_13_29_05_902b48c4-7675-43da-aa91-bd0cb1bd059d.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://rss.com/podcasts/theinterviewer/2865748",
+    "episodeNumber": 3,
+    "season": 24,
+    "imageUrl": "https://media.rss.com/theinterviewer/ep_cover_20260528_010544_ba84da4e5ece340fe7a0804364231f51.png",
+    "explicit": false
+  },
+  {
     "showSlug": "timestalk",
     "guid": "2de9d999-14b4-40f3-ab81-eb4a5bd5471c",
     "title": "Times Talk: The secret life of your ballot",
@@ -125,22 +141,6 @@
     "episodeNumber": 41,
     "season": 2,
     "imageUrl": "https://artwork.captivate.fm/4cd86d00-a9b5-4b07-88b5-7777bfea1151/Spotify.jpeg",
-    "explicit": false
-  },
-  {
-    "showSlug": "the-she-word",
-    "guid": "cb968e26-4b77-48bf-907b-f72fdabcdfde",
-    "title": "The SHE Warriors - Miriana Conte - The Woman Behind Malta's Most Controversal and Celebrated Icon",
-    "description": "Miriana Conte is the fantastically flamboyant and often outrageous personality behind one of Malta’s most controversial Eurovision entries, which had gone viral all over the world even before she had won the national competition. ‘Serving Kant’ caused outcry in the UK particularly due to the play on",
-    "pubDate": "Thu, 14 May 2026 06:30:00 GMT",
-    "pubDateIso": "2026-05-14T06:30:00.000Z",
-    "durationSeconds": 4965,
-    "audioUrl": "https://content.rss.com/episodes/18823/2820375/theinterviewer/2026_05_13_16_28_33_01dc7a8e-4fea-47a5-868e-8abb7a41f8b4.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://rss.com/podcasts/theinterviewer/2820375",
-    "episodeNumber": 8,
-    "season": 22,
-    "imageUrl": "https://media.rss.com/theinterviewer/ep_cover_20260513_040530_65082d6ff1e6e8cfc6043e1c3871fd08.png",
     "explicit": false
   },
   {
