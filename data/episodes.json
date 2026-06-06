@@ -1,5 +1,21 @@
 [
   {
+    "showSlug": "timestalk",
+    "guid": "dbb475ff-233f-4e52-b08d-2cc2baab7cb9",
+    "title": "The winners and losers of Malta&apos;s general election",
+    "description": "Political analysts Pierre Portelli and Robert Musumeci help Mark Laurence Zammit  dissect the current state of Maltese politics.They discuss the performance of the Labour and Nationalist parties in the 2026 general election, Robert Abela's cabinet appointments and the (in?)justice of parliament's ge",
+    "pubDate": "Sat, 06 Jun 2026 06:30:00 +0200",
+    "pubDateIso": "2026-06-06T04:30:00.000Z",
+    "durationSeconds": 4854,
+    "audioUrl": "https://episodes.captivate.fm/episode/dbb475ff-233f-4e52-b08d-2cc2baab7cb9.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
+    "episodeNumber": 44,
+    "season": 2,
+    "imageUrl": "https://artwork.captivate.fm/dc4cefaf-c0f5-434c-b124-4c91d64d2df6/times-talk-21.png",
+    "explicit": false
+  },
+  {
     "showSlug": "the-she-word",
     "guid": "36d6aad1-ff5f-4cf1-ba57-80652351671d",
     "title": "The SHE Word - A Life After Domestic Violence",
@@ -221,22 +237,6 @@
     "episodeNumber": 40,
     "season": 2,
     "imageUrl": "https://artwork.captivate.fm/3a7af769-7750-4bc9-8fa7-1cd271a13757/TIMES-TALK-11-Thumbnails-3000-x-3000-px-3-jpg.jpeg",
-    "explicit": false
-  },
-  {
-    "showSlug": "timestalk",
-    "guid": "722847e5-116b-434e-af58-a9cc9d64f320",
-    "title": "Times Talk - Power, underdogs, and a supermarket of promises",
-    "description": "Prime Minister Robert Abela has called an early general election for May 30.The campaign’s opening days have already seen a wave of pledges and voter-focused measures, as the main parties begin to draw their battle lines.With the Labour government firmly in the driving seat and making full use of it",
-    "pubDate": "Fri, 01 May 2026 06:00:00 +0200",
-    "pubDateIso": "2026-05-01T04:00:00.000Z",
-    "durationSeconds": 3024,
-    "audioUrl": "https://episodes.captivate.fm/episode/722847e5-116b-434e-af58-a9cc9d64f320.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
-    "episodeNumber": 39,
-    "season": 2,
-    "imageUrl": "https://artwork.captivate.fm/265b5006-f2ee-4988-8001-c967692a0774/SPOT.jpeg",
     "explicit": false
   },
   {
