@@ -1,5 +1,21 @@
 [
   {
+    "showSlug": "the-she-word",
+    "guid": "234fc478-eb63-4986-9489-7c7396ba17ce",
+    "title": "The SHE Word - Women and ADHD, the neurodivergent superpower",
+    "description": "ADHD remains a largely misunderstood and often misdiagnosed condition. Despite growing awareness, chronic underdiagnosis has historically hindered millions from getting support.Recent years however, have seen a surge in adult diagnoses. ADHD diagnoses in women aged 23–49 nearly DOUBLED between 2020 ",
+    "pubDate": "Wed, 10 Jun 2026 15:20:15 GMT",
+    "pubDateIso": "2026-06-10T15:20:15.000Z",
+    "durationSeconds": 5437,
+    "audioUrl": "https://content.rss.com/episodes/18823/2904220/theinterviewer/2026_06_10_15_11_22_5fa21a45-f161-4e2e-b2f3-b2756571d885.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://rss.com/podcasts/theinterviewer/2904220",
+    "episodeNumber": 5,
+    "season": 24,
+    "imageUrl": "https://media.rss.com/theinterviewer/ep_cover_20260610_030648_45b82d6a5af34ff780eab0a1735c0198.png",
+    "explicit": false
+  },
+  {
     "showSlug": "jon-mallia-podcast",
     "guid": "049ad09e-7c8c-49a6-95a0-3373788e2a63",
     "title": "SFIDA QATT MA BEŻŻGĦATNI | Frank Zammit",
@@ -29,22 +45,6 @@
     "episodeNumber": 44,
     "season": 2,
     "imageUrl": "https://artwork.captivate.fm/dc4cefaf-c0f5-434c-b124-4c91d64d2df6/times-talk-21.png",
-    "explicit": false
-  },
-  {
-    "showSlug": "the-she-word",
-    "guid": "36d6aad1-ff5f-4cf1-ba57-80652351671d",
-    "title": "The SHE Word - A Life After Domestic Violence",
-    "description": "Domestic Violence affects one in three women in their life time. Let that sink in for a moment, one in three women will experience physical, emotional, mental, financial or sexual abuse from an intimate partner, a parent, a sibling or someone else within the home. But, there is life after DV as Pear",
-    "pubDate": "Thu, 04 Jun 2026 00:36:43 GMT",
-    "pubDateIso": "2026-06-04T00:36:43.000Z",
-    "durationSeconds": 7579,
-    "audioUrl": "https://content.rss.com/episodes/18823/2880955/theinterviewer/2026_06_03_02_00_10_1142f8dd-65a6-4a3d-a781-fb4a28a1d6d7.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://rss.com/podcasts/theinterviewer/2880955",
-    "episodeNumber": 5,
-    "season": 23,
-    "imageUrl": "https://media.rss.com/theinterviewer/ep_cover_20260604_120625_5a23190f47239f23ede095a7bcf8a0be.png",
     "explicit": false
   },
   {
