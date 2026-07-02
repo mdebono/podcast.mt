@@ -1,5 +1,21 @@
 [
   {
+    "showSlug": "the-she-word",
+    "guid": "3df024fa-6c73-47ae-a5d0-c988ec542fe2",
+    "title": "The SHE Word - The Truth Behind The Influencer",
+    "description": "In this episode of The SHE Word, Trudy grills three content creators / influencers to find out the real truth behind what they do. 37% of 16-25 year-olds want to be a content creator, with an additional 13% already working in the industry. Furthermore, a massive 57% of Gen Z globally express interes",
+    "pubDate": "Wed, 01 Jul 2026 20:00:34 GMT",
+    "pubDateIso": "2026-07-01T20:00:34.000Z",
+    "durationSeconds": 6172,
+    "audioUrl": "https://content.rss.com/episodes/18823/2958093/theinterviewer/2026_07_01_20_00_22_88e89882-d423-40ba-9df8-57972959ff58.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://rss.com/podcasts/theinterviewer/2958093",
+    "episodeNumber": 6,
+    "season": 25,
+    "imageUrl": "https://media.rss.com/theinterviewer/ep_cover_20260701_070712_87b0fbffe380c8340076b752719dfec2.png",
+    "explicit": false
+  },
+  {
     "showSlug": "il-podcast-tal-parlament",
     "guid": "https://r2.parlament.podcast.mt/Audio/15thLeg/Plenary/Plenary  005 30-06-2026 1600hrs.mp3",
     "title": "Sessjoni Plenarja S15E005",
@@ -237,22 +253,6 @@
     "episodeNumber": 2,
     "season": 24,
     "imageUrl": "https://media.rss.com/theinterviewer/ep_cover_20260527_120509_811f6ac5ee11b85ea6ddca6a5c131420.png",
-    "explicit": false
-  },
-  {
-    "showSlug": "the-she-word",
-    "guid": "82304d63-56e8-41be-894f-87926080ff80",
-    "title": "The SHE Word Special: Everything You Wanted To Know About The Opposite Sex - Part One - Ira's Questions",
-    "description": "In the special four part mini series, The SHE Word brings you a brilliantly funny, brutally honest, truthfully touching and outrageously entertaining show in which four well known Maltese personalities pitch their questions to the opposite sex on all things important. In part one, Ira takes the 'sta",
-    "pubDate": "Tue, 26 May 2026 14:46:13 GMT",
-    "pubDateIso": "2026-05-26T14:46:13.000Z",
-    "durationSeconds": 1378,
-    "audioUrl": "https://content.rss.com/episodes/18823/2858752/theinterviewer/2026_05_26_14_42_53_bd525d5b-2316-4fb8-b0ae-65ef925bd872.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://rss.com/podcasts/theinterviewer/2858752",
-    "episodeNumber": 1,
-    "season": 24,
-    "imageUrl": "https://media.rss.com/theinterviewer/ep_cover_20260526_010530_7554dd9ad561fb0454d5adb74a797d75.png",
     "explicit": false
   },
   {
