@@ -1,5 +1,21 @@
 [
   {
+    "showSlug": "timestalk",
+    "guid": "0b95ce0c-ba81-4f28-8a30-b0fead86b1d6",
+    "title": "Times Talk - The trial of Yorgen Fenech week 1",
+    "description": "The trial of Yorgen Fenech, who is charged in connection with the murder of Daphne Caruana Galizia, is one of the most consequential criminal trials in Malta's history.Three days into the proceedings, Mark Laurence Zammit sits down with Times of Malta's court correspondent Clara Farrugia to unpack t",
+    "pubDate": "Sat, 04 Jul 2026 06:00:00 +0200",
+    "pubDateIso": "2026-07-04T04:00:00.000Z",
+    "durationSeconds": 1798,
+    "audioUrl": "https://episodes.captivate.fm/episode/0b95ce0c-ba81-4f28-8a30-b0fead86b1d6.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
+    "episodeNumber": 45,
+    "season": 2,
+    "imageUrl": "https://artwork.captivate.fm/42b40b00-dd51-4484-9db4-5cdbc1403287/Spotify.jpeg",
+    "explicit": false
+  },
+  {
     "showSlug": "the-she-word",
     "guid": "3df024fa-6c73-47ae-a5d0-c988ec542fe2",
     "title": "The SHE Word - The Truth Behind The Influencer",
@@ -301,22 +317,6 @@
     "episodeNumber": 41,
     "season": 2,
     "imageUrl": "https://artwork.captivate.fm/4cd86d00-a9b5-4b07-88b5-7777bfea1151/Spotify.jpeg",
-    "explicit": false
-  },
-  {
-    "showSlug": "timestalk",
-    "guid": "98e6b70d-0b46-4f2a-9580-7f3b547d3199",
-    "title": "Times Talk - The elephants in Malta’s election room",
-    "description": "The second week of Malta’s 2026 general election campaign sparked its first controversies. As Labour leader Robert Abela and Nationalist Party leader Alex Borg make their political pitches, mainly through cash bonanzas, are the country’s (medium-to-long term) problems being ignored?In this episode o",
-    "pubDate": "Fri, 08 May 2026 06:00:00 +0200",
-    "pubDateIso": "2026-05-08T04:00:00.000Z",
-    "durationSeconds": 4023,
-    "audioUrl": "https://episodes.captivate.fm/episode/98e6b70d-0b46-4f2a-9580-7f3b547d3199.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
-    "episodeNumber": 40,
-    "season": 2,
-    "imageUrl": "https://artwork.captivate.fm/3a7af769-7750-4bc9-8fa7-1cd271a13757/TIMES-TALK-11-Thumbnails-3000-x-3000-px-3-jpg.jpeg",
     "explicit": false
   },
   {
