@@ -1,5 +1,21 @@
 [
   {
+    "showSlug": "jon-mallia-podcast",
+    "guid": "08e508d2-514a-4242-8bff-993d311cb4ec",
+    "title": "IL-KAVALLIERI KELLHOM EGO KBIR | Tonio Mallia",
+    "description": "&lt;p&gt;Tonio Mallia jmexxi l-Fondazzjoni tal-Konkatidral ta’ San Ġwann. &lt;br&gt;Jgħidli l-istorja ta&#39; kif il-Konkatidral spiċċa minn dak li hu jirreferi għalih bħala &#39;garaxx&#39; għall-post ta&#39; prestiġju li hu llum, kif Caravaggio sab ruħu f&#39;Malta u x&#39;kien jiġri mit-tfal ille",
+    "pubDate": "Mon, 06 Jul 2026 19:00:00 GMT",
+    "pubDateIso": "2026-07-06T19:00:00.000Z",
+    "durationSeconds": 6446,
+    "audioUrl": "https://anchor.fm/s/53bc2b60/podcast/play/122460166/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-6-6%2F427453981-44100-2-8cd99a18f6b0d.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://podcasters.spotify.com/pod/show/jonmallia/episodes/IL-KAVALLIERI-KELLHOM-EGO-KBIR--Tonio-Mallia-e3lnmi6",
+    "episodeNumber": null,
+    "season": null,
+    "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/13948408/13948408-1645521893673-90bbcf0399d1e.jpg",
+    "explicit": false
+  },
+  {
     "showSlug": "timestalk",
     "guid": "0b95ce0c-ba81-4f28-8a30-b0fead86b1d6",
     "title": "Times Talk - The trial of Yorgen Fenech week 1",
@@ -269,22 +285,6 @@
     "episodeNumber": 2,
     "season": 24,
     "imageUrl": "https://media.rss.com/theinterviewer/ep_cover_20260527_120509_811f6ac5ee11b85ea6ddca6a5c131420.png",
-    "explicit": false
-  },
-  {
-    "showSlug": "jon-mallia-podcast",
-    "guid": "800138cc-b040-4523-8dff-a92bc9c62a57",
-    "title": "L-ELEZZJONI ĠENERALI | Live mal-Patruni",
-    "description": "&lt;p&gt;X&#39;sinjal qed jingħata dwar id-direzzjoni li fih se jmur il-pajjiż? Niddiskutu jien, Robert Formosa u David Grech.&lt;br&gt;Dan il-kontenut ġie mxandar LIVE nhar it-12 ta&#39; Mejju 2026.&lt;br&gt;Segwi l-KAŻIN li jmiss ma&#39; Alex Borg u Robert Abela nhar il-25 ta&#39; Mejju fid-9PM ha",
-    "pubDate": "Thu, 21 May 2026 19:00:01 GMT",
-    "pubDateIso": "2026-05-21T19:00:01.000Z",
-    "durationSeconds": 4634,
-    "audioUrl": "https://anchor.fm/s/53bc2b60/podcast/play/120334525/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-21%2F424614700-44100-2-78694fd5cd614.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://podcasters.spotify.com/pod/show/jonmallia/episodes/L-ELEZZJONI-ENERALI--Live-mal-Patruni-e3jmqnt",
-    "episodeNumber": null,
-    "season": null,
-    "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/13948408/13948408-1645521893673-90bbcf0399d1e.jpg",
     "explicit": false
   },
   {
