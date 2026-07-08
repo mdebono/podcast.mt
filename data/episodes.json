@@ -1,5 +1,21 @@
 [
   {
+    "showSlug": "il-podcast-tal-parlament",
+    "guid": "https://r2.parlament.podcast.mt/Audio/15thLeg/Plenary/Plenary  008 07-07-2026 1600hrs.mp3",
+    "title": "Sessjoni Plenarja S15E008",
+    "description": "Il-Ħmistax-il Leġislatura (2026 -) Seduta Nru: 008 - It-Tlieta, 7 ta' Lulju 2026 16:00\n\nAġenda:\nMOZZJONIJIET\n- Mozzjoni Nru 13 - Estimi ta’ Dħul u Nfiq tal-Awtorità għall-Ambjent u r-Riżorsi għas-sena finanzjarja 2026\n- Mozzjoni Nru 14 - Estimi ta' Dħul u Nfiq tal-Korporazzjoni għas-Servizzi tal-Ilm",
+    "pubDate": "Tue, 07 Jul 2026 16:00:00 +0200",
+    "pubDateIso": "2026-07-07T14:00:00.000Z",
+    "durationSeconds": null,
+    "audioUrl": "https://r2.parlament.podcast.mt/Audio/15thLeg/Plenary/Plenary%20%20008%2007-07-2026%201600hrs.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://parlament.mt/15th-leg/plenary-session/ps-008-07072026-0400-pm/",
+    "episodeNumber": null,
+    "season": null,
+    "imageUrl": null,
+    "explicit": false
+  },
+  {
     "showSlug": "jon-mallia-podcast",
     "guid": "08e508d2-514a-4242-8bff-993d311cb4ec",
     "title": "IL-KAVALLIERI KELLHOM EGO KBIR | Tonio Mallia",
@@ -125,22 +141,6 @@
     "episodeNumber": null,
     "season": null,
     "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/13948408/13948408-1645521893673-90bbcf0399d1e.jpg",
-    "explicit": false
-  },
-  {
-    "showSlug": "il-podcast-tal-parlament",
-    "guid": "https://r2.parlament.podcast.mt/Audio/15thLeg/Plenary/Plenary  003 23-06-2026 1600hrs.mp3",
-    "title": "Sessjoni Plenarja S15E003",
-    "description": "Il-Ħmistax-il Leġislatura (2026 -) Seduta Nru: 003 - It-Tlieta, 23 ta' Ġunju 2026 16:00\n\nAġenda:\nORDNIJIET TAL-ĠURNATA\n- Mozzjoni Nru 3 - Indirizz b'risposta għad-Diskors tal-President ta' Malta (Kont.)",
-    "pubDate": "Tue, 23 Jun 2026 16:00:00 +0200",
-    "pubDateIso": "2026-06-23T14:00:00.000Z",
-    "durationSeconds": null,
-    "audioUrl": "https://r2.parlament.podcast.mt/Audio/15thLeg/Plenary/Plenary%20%20003%2023-06-2026%201600hrs.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://parlament.mt/15th-leg/plenary-session/ps-003-23062026-0400-pm/",
-    "episodeNumber": null,
-    "season": null,
-    "imageUrl": null,
     "explicit": false
   },
   {
