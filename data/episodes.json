@@ -1,5 +1,21 @@
 [
   {
+    "showSlug": "timestalk",
+    "guid": "f7d34490-93bf-49d4-be9a-ece47b8620a2",
+    "title": "Times Talk: Inside the second week of the trial of Yorgen Fenech",
+    "description": "As the second week of Yorgen Fenech's trial comes to a close, Times of Malta court reporter Clara Farrugia and Mark Laurence Zammit sit down for a new Times Talk episode to unpack the details of the courtroom drama that is gripping the nation.Among the most chilling moments this week was the testimo",
+    "pubDate": "Sat, 11 Jul 2026 06:00:00 +0200",
+    "pubDateIso": "2026-07-11T04:00:00.000Z",
+    "durationSeconds": 1582,
+    "audioUrl": "https://episodes.captivate.fm/episode/f7d34490-93bf-49d4-be9a-ece47b8620a2.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
+    "episodeNumber": 46,
+    "season": 2,
+    "imageUrl": "https://artwork.captivate.fm/72f5a47a-3089-4267-a03d-d398bef0d994/Times-Talk-Try-3.jpg",
+    "explicit": false
+  },
+  {
     "showSlug": "il-podcast-tal-parlament",
     "guid": "https://r2.parlament.podcast.mt/Audio/15thLeg/Plenary/Plenary  009 08-07-2026 1600hrs.mp3",
     "title": "Sessjoni Plenarja S15E009",
@@ -301,22 +317,6 @@
     "episodeNumber": 42,
     "season": 2,
     "imageUrl": "https://artwork.captivate.fm/5f573b26-83d6-45a0-b94d-f217b07c447b/Spotify.jpeg",
-    "explicit": false
-  },
-  {
-    "showSlug": "timestalk",
-    "guid": "b53961ab-a06b-4eff-b878-3c8183f9f009",
-    "title": "Times Talk - Entitled voters, shackled leaders",
-    "description": "It is very worrying the the election campaign has, so far, almost entirely revolved around 'what's in it for me', according to political analysts Lou Bondi and Michelle Attard Tonna.The two were speaking on the latest episode of Times Talk Campaign Watch during which they dissected the third week of",
-    "pubDate": "Sat, 16 May 2026 06:00:00 +0200",
-    "pubDateIso": "2026-05-16T04:00:00.000Z",
-    "durationSeconds": 3534,
-    "audioUrl": "https://episodes.captivate.fm/episode/b53961ab-a06b-4eff-b878-3c8183f9f009.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
-    "episodeNumber": 41,
-    "season": 2,
-    "imageUrl": "https://artwork.captivate.fm/4cd86d00-a9b5-4b07-88b5-7777bfea1151/Spotify.jpeg",
     "explicit": false
   },
   {
