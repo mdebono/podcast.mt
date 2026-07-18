@@ -1,6 +1,22 @@
 [
   {
     "showSlug": "timestalk",
+    "guid": "4232bc1e-e112-4551-a895-77bfd5afacd2",
+    "title": "The trial of Yorgen Fenech - Week 3",
+    "description": "As the third week of Yorgen Fenech's trial comes to a close, Times of Malta court reporter Clara Farrugia and editor-in-chief Herman Grech sat down for a new Times Talk episode to unpack the details of the courtroom drama that is gripping the country. Among the most chilling moments in Hall 22 this ",
+    "pubDate": "Sat, 18 Jul 2026 06:30:00 +0200",
+    "pubDateIso": "2026-07-18T04:30:00.000Z",
+    "durationSeconds": 1408,
+    "audioUrl": "https://episodes.captivate.fm/episode/4232bc1e-e112-4551-a895-77bfd5afacd2.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
+    "episodeNumber": 47,
+    "season": 2,
+    "imageUrl": "https://artwork.captivate.fm/d22b2b02-9eaa-434e-9cf6-56c3eb5de7ce/Times-Talk-Try-3.jpg",
+    "explicit": false
+  },
+  {
+    "showSlug": "timestalk",
     "guid": "f7d34490-93bf-49d4-be9a-ece47b8620a2",
     "title": "Times Talk: Inside the second week of the trial of Yorgen Fenech",
     "description": "As the second week of Yorgen Fenech's trial comes to a close, Times of Malta court reporter Clara Farrugia and Mark Laurence Zammit sit down for a new Times Talk episode to unpack the details of the courtroom drama that is gripping the nation.Among the most chilling moments this week was the testimo",
@@ -221,22 +237,6 @@
     "episodeNumber": 2,
     "season": 24,
     "imageUrl": "https://media.rss.com/theinterviewer/ep_cover_20260527_120509_811f6ac5ee11b85ea6ddca6a5c131420.png",
-    "explicit": false
-  },
-  {
-    "showSlug": "timestalk",
-    "guid": "d42f9342-6256-4b50-9e24-fcddd94f766e",
-    "title": "Times Talk - Are election polls lying to us?",
-    "description": "With just over a week remaining before Maltese voters head to the polls to choose Malta's next prime minister, the latest episode of&nbsp;Times Talk&nbsp;delves into the science and controversy behind political polling, as current surveys continue to indicate a significant lead for the Labour Party.",
-    "pubDate": "Thu, 21 May 2026 06:00:00 +0200",
-    "pubDateIso": "2026-05-21T04:00:00.000Z",
-    "durationSeconds": 2498,
-    "audioUrl": "https://episodes.captivate.fm/episode/d42f9342-6256-4b50-9e24-fcddd94f766e.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
-    "episodeNumber": 42,
-    "season": 2,
-    "imageUrl": "https://artwork.captivate.fm/5f573b26-83d6-45a0-b94d-f217b07c447b/Spotify.jpeg",
     "explicit": false
   },
   {
