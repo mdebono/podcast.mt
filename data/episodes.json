@@ -1,5 +1,21 @@
 [
   {
+    "showSlug": "timestalk",
+    "guid": "51a68437-c784-4553-ae6b-f159c2719b37",
+    "title": "The trial of Yorgen Fenech - Week 4",
+    "description": "It was a week of claims, counterclaims and secret recordings as the fourth week of the Yorgen Fenech trial drew to a close.Times of Malta court reporter Clara Farrugia and editor-in-chief Herman Grech sat down for a new episode of Times Talk to unpack the latest courtroom drama gripping the country.",
+    "pubDate": "Sat, 25 Jul 2026 06:00:00 +0200",
+    "pubDateIso": "2026-07-25T04:00:00.000Z",
+    "durationSeconds": 1184,
+    "audioUrl": "https://episodes.captivate.fm/episode/51a68437-c784-4553-ae6b-f159c2719b37.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
+    "episodeNumber": 48,
+    "season": 2,
+    "imageUrl": "https://artwork.captivate.fm/4977fc9d-7af7-46d8-b8be-19c246fba80b/Times-Talk-Try-3.jpg",
+    "explicit": false
+  },
+  {
     "showSlug": "jon-mallia-podcast",
     "guid": "5b6b3144-2583-4ed4-bfa2-386b604bd8f2",
     "title": "NETWORKING IS MY IDEA OF A NIGHTMARE | Jacqui Losco",
@@ -189,22 +205,6 @@
     "episodeNumber": 3,
     "season": 24,
     "imageUrl": "https://media.rss.com/theinterviewer/ep_cover_20260528_010544_ba84da4e5ece340fe7a0804364231f51.png",
-    "explicit": false
-  },
-  {
-    "showSlug": "timestalk",
-    "guid": "2de9d999-14b4-40f3-ab81-eb4a5bd5471c",
-    "title": "Times Talk: The secret life of your ballot",
-    "description": "The country's going to the polls in less than 48 hours, and this latest episode of Times Talk is an essential guide for the perplexed.It breaks down the mechanics of Malta’s electoral system - one of the most democratic, yet complex, in the world.Our speakers trace where your vote will go from the m",
-    "pubDate": "Thu, 28 May 2026 06:00:00 +0200",
-    "pubDateIso": "2026-05-28T04:00:00.000Z",
-    "durationSeconds": 3499,
-    "audioUrl": "https://episodes.captivate.fm/episode/2de9d999-14b4-40f3-ab81-eb4a5bd5471c.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
-    "episodeNumber": 43,
-    "season": 2,
-    "imageUrl": "https://artwork.captivate.fm/23d139e3-ddee-4ca4-9bea-a016e83881af/TIMES-TALK-11-Thumbnails-1.jpg",
     "explicit": false
   },
   {
