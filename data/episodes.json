@@ -1,6 +1,22 @@
 [
   {
     "showSlug": "timestalk",
+    "guid": "6255020f-96a2-4773-bc3c-a36ffa0eb6d3",
+    "title": "Times Talk: Why we&apos;re breaking our usual schedule to bring you this episode",
+    "description": "Times Talk on the trial of Yorgen Fenech usually comes out on the weekend and includes a run-down of all that happened that week.But as former OPM chief of staff Keith Schembri took the witness stand on Tuesday, things got heated and prompted this mid-week episode about what happened before and duri",
+    "pubDate": "Thu, 30 Jul 2026 14:00:00 +0200",
+    "pubDateIso": "2026-07-30T12:00:00.000Z",
+    "durationSeconds": 2243,
+    "audioUrl": "https://episodes.captivate.fm/episode/6255020f-96a2-4773-bc3c-a36ffa0eb6d3.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
+    "episodeNumber": 49,
+    "season": 2,
+    "imageUrl": "https://artwork.captivate.fm/748e4474-4b00-49e9-be3d-806cd54bb442/Times-Talk-Try-3-1.jpg",
+    "explicit": false
+  },
+  {
+    "showSlug": "timestalk",
     "guid": "51a68437-c784-4553-ae6b-f159c2719b37",
     "title": "The trial of Yorgen Fenech - Week 4",
     "description": "It was a week of claims, counterclaims and secret recordings as the fourth week of the Yorgen Fenech trial drew to a close.Times of Malta court reporter Clara Farrugia and editor-in-chief Herman Grech sat down for a new episode of Times Talk to unpack the latest courtroom drama gripping the country.",
@@ -157,22 +173,6 @@
     "episodeNumber": null,
     "season": null,
     "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/13948408/13948408-1645521893673-90bbcf0399d1e.jpg",
-    "explicit": false
-  },
-  {
-    "showSlug": "timestalk",
-    "guid": "dbb475ff-233f-4e52-b08d-2cc2baab7cb9",
-    "title": "The winners and losers of Malta&apos;s general election",
-    "description": "Political analysts Pierre Portelli and Robert Musumeci help Mark Laurence Zammit  dissect the current state of Maltese politics.They discuss the performance of the Labour and Nationalist parties in the 2026 general election, Robert Abela's cabinet appointments and the (in?)justice of parliament's ge",
-    "pubDate": "Sat, 06 Jun 2026 06:30:00 +0200",
-    "pubDateIso": "2026-06-06T04:30:00.000Z",
-    "durationSeconds": 4854,
-    "audioUrl": "https://episodes.captivate.fm/episode/dbb475ff-233f-4e52-b08d-2cc2baab7cb9.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
-    "episodeNumber": 44,
-    "season": 2,
-    "imageUrl": "https://artwork.captivate.fm/dc4cefaf-c0f5-434c-b124-4c91d64d2df6/times-talk-21.png",
     "explicit": false
   },
   {
