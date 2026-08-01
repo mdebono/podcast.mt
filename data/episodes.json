@@ -1,6 +1,22 @@
 [
   {
     "showSlug": "timestalk",
+    "guid": "27459c52-2c96-47ce-b0db-0e76210c55b3",
+    "title": "Inside week 5 in the trial of Yorgen Fenech | Times Talk",
+    "description": "The latest episode of Times Talk unpacks the last two days of Keith Schembri's testimony during the trial of Yorgen Fenech earlier this week.In the 30-minute episode, court reporter Clara Farrugia and Mark Laurence Zammit take a deep dive into some of the toughest questions the former OPM chief of s",
+    "pubDate": "Sat, 01 Aug 2026 06:00:00 +0200",
+    "pubDateIso": "2026-08-01T04:00:00.000Z",
+    "durationSeconds": 1758,
+    "audioUrl": "https://episodes.captivate.fm/episode/27459c52-2c96-47ce-b0db-0e76210c55b3.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
+    "episodeNumber": 50,
+    "season": 2,
+    "imageUrl": "https://artwork.captivate.fm/c2e068e8-f481-4301-9f4f-75e408c20c87/Times-Talk-Try-3.jpg",
+    "explicit": false
+  },
+  {
+    "showSlug": "timestalk",
     "guid": "6255020f-96a2-4773-bc3c-a36ffa0eb6d3",
     "title": "Times Talk: Why we&apos;re breaking our usual schedule to bring you this episode",
     "description": "Times Talk on the trial of Yorgen Fenech usually comes out on the weekend and includes a run-down of all that happened that week.But as former OPM chief of staff Keith Schembri took the witness stand on Tuesday, things got heated and prompted this mid-week episode about what happened before and duri",
@@ -93,22 +109,6 @@
     "episodeNumber": null,
     "season": null,
     "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/13948408/13948408-1645521893673-90bbcf0399d1e.jpg",
-    "explicit": false
-  },
-  {
-    "showSlug": "timestalk",
-    "guid": "0b95ce0c-ba81-4f28-8a30-b0fead86b1d6",
-    "title": "Times Talk - The trial of Yorgen Fenech week 1",
-    "description": "The trial of Yorgen Fenech, who is charged in connection with the murder of Daphne Caruana Galizia, is one of the most consequential criminal trials in Malta's history.Three days into the proceedings, Mark Laurence Zammit sits down with Times of Malta's court correspondent Clara Farrugia to unpack t",
-    "pubDate": "Sat, 04 Jul 2026 06:00:00 +0200",
-    "pubDateIso": "2026-07-04T04:00:00.000Z",
-    "durationSeconds": 1798,
-    "audioUrl": "https://episodes.captivate.fm/episode/0b95ce0c-ba81-4f28-8a30-b0fead86b1d6.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
-    "episodeNumber": 45,
-    "season": 2,
-    "imageUrl": "https://artwork.captivate.fm/42b40b00-dd51-4484-9db4-5cdbc1403287/Spotify.jpeg",
     "explicit": false
   },
   {
