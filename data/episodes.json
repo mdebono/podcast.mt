@@ -1,6 +1,22 @@
 [
   {
     "showSlug": "timestalk",
+    "guid": "21ddc880-aa1f-48cf-a4e0-86e81262fadf",
+    "title": "A sex abuse victim and the priest who told her to move on",
+    "description": "In June 2025, a retired Maltese bishop caused a stir when he said on TV that abuse victims should first be encouraged to forgive their abusers before going to the police.As backlash grew, George Frendo apologised, saying he had not meant that forgiveness should substitute reporting such crimes to au",
+    "pubDate": "Sun, 02 Aug 2026 07:30:00 +0200",
+    "pubDateIso": "2026-08-02T05:30:00.000Z",
+    "durationSeconds": 4515,
+    "audioUrl": "https://episodes.captivate.fm/episode/21ddc880-aa1f-48cf-a4e0-86e81262fadf.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
+    "episodeNumber": 51,
+    "season": 2,
+    "imageUrl": "https://artwork.captivate.fm/1674ffab-fa55-4fe5-83eb-864eb2ab272f/Times-Talk-Try-3.jpg",
+    "explicit": false
+  },
+  {
+    "showSlug": "timestalk",
     "guid": "27459c52-2c96-47ce-b0db-0e76210c55b3",
     "title": "Inside week 5 in the trial of Yorgen Fenech | Times Talk",
     "description": "The latest episode of Times Talk unpacks the last two days of Keith Schembri's testimony during the trial of Yorgen Fenech earlier this week.In the 30-minute episode, court reporter Clara Farrugia and Mark Laurence Zammit take a deep dive into some of the toughest questions the former OPM chief of s",
@@ -77,22 +93,6 @@
     "episodeNumber": 47,
     "season": 2,
     "imageUrl": "https://artwork.captivate.fm/d22b2b02-9eaa-434e-9cf6-56c3eb5de7ce/Times-Talk-Try-3.jpg",
-    "explicit": false
-  },
-  {
-    "showSlug": "timestalk",
-    "guid": "f7d34490-93bf-49d4-be9a-ece47b8620a2",
-    "title": "Times Talk: Inside the second week of the trial of Yorgen Fenech",
-    "description": "As the second week of Yorgen Fenech's trial comes to a close, Times of Malta court reporter Clara Farrugia and Mark Laurence Zammit sit down for a new Times Talk episode to unpack the details of the courtroom drama that is gripping the nation.Among the most chilling moments this week was the testimo",
-    "pubDate": "Sat, 11 Jul 2026 06:00:00 +0200",
-    "pubDateIso": "2026-07-11T04:00:00.000Z",
-    "durationSeconds": 1582,
-    "audioUrl": "https://episodes.captivate.fm/episode/f7d34490-93bf-49d4-be9a-ece47b8620a2.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
-    "episodeNumber": 46,
-    "season": 2,
-    "imageUrl": "https://artwork.captivate.fm/72f5a47a-3089-4267-a03d-d398bef0d994/Times-Talk-Try-3.jpg",
     "explicit": false
   },
   {
