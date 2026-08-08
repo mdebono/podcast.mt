@@ -1,6 +1,22 @@
 [
   {
     "showSlug": "timestalk",
+    "guid": "34bb53ce-3100-4d6c-b1c2-8acad4fc16c9",
+    "title": "Unpacking week 6 of the Yorgen Fenech trial",
+    "description": "From WhatsApp chats and an infamous video to a huge Electrogas investigation, a lot happened this weekA week is a long time in politics, they say, and so it seems in the trial of Yorgen Fenech as well. A lot has happened in court this week, and Times Talk unpacks it all in the latest episode about t",
+    "pubDate": "Sat, 08 Aug 2026 07:30:00 +0200",
+    "pubDateIso": "2026-08-08T05:30:00.000Z",
+    "durationSeconds": 2563,
+    "audioUrl": "https://episodes.captivate.fm/episode/34bb53ce-3100-4d6c-b1c2-8acad4fc16c9.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
+    "episodeNumber": 52,
+    "season": 2,
+    "imageUrl": "https://artwork.captivate.fm/ceb89d98-9c5c-4654-91bb-05003044d6ed/WhatsApp-Image-2026-08-07-at-17-39-31-1.jpeg",
+    "explicit": false
+  },
+  {
+    "showSlug": "timestalk",
     "guid": "21ddc880-aa1f-48cf-a4e0-86e81262fadf",
     "title": "A sex abuse victim and the priest who told her to move on",
     "description": "In June 2025, a retired Maltese bishop caused a stir when he said on TV that abuse victims should first be encouraged to forgive their abusers before going to the police.As backlash grew, George Frendo apologised, saying he had not meant that forgiveness should substitute reporting such crimes to au",
@@ -77,22 +93,6 @@
     "episodeNumber": null,
     "season": null,
     "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/13948408/13948408-1645521893673-90bbcf0399d1e.jpg",
-    "explicit": false
-  },
-  {
-    "showSlug": "timestalk",
-    "guid": "4232bc1e-e112-4551-a895-77bfd5afacd2",
-    "title": "The trial of Yorgen Fenech - Week 3",
-    "description": "As the third week of Yorgen Fenech's trial comes to a close, Times of Malta court reporter Clara Farrugia and editor-in-chief Herman Grech sat down for a new Times Talk episode to unpack the details of the courtroom drama that is gripping the country. Among the most chilling moments in Hall 22 this ",
-    "pubDate": "Sat, 18 Jul 2026 06:30:00 +0200",
-    "pubDateIso": "2026-07-18T04:30:00.000Z",
-    "durationSeconds": 1408,
-    "audioUrl": "https://episodes.captivate.fm/episode/4232bc1e-e112-4551-a895-77bfd5afacd2.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
-    "episodeNumber": 47,
-    "season": 2,
-    "imageUrl": "https://artwork.captivate.fm/d22b2b02-9eaa-434e-9cf6-56c3eb5de7ce/Times-Talk-Try-3.jpg",
     "explicit": false
   },
   {
