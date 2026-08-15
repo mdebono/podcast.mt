@@ -1,6 +1,22 @@
 [
   {
     "showSlug": "timestalk",
+    "guid": "6b788e87-17da-4403-bf83-de635b86e30f",
+    "title": "Melvin takes the stand against Yorgen Fenech",
+    "description": "The taxi driver who says Yorgen Fenech paid him €150,000 to have Daphne Caruana Galizia spent five gruelling days on the witness stand this week, answering questions from prosecutors and defence lawyers.Melvin Theuma - the pardoned middleman who is the prosecution's star witness in the case - had a ",
+    "pubDate": "Sat, 15 Aug 2026 10:15:00 +0200",
+    "pubDateIso": "2026-08-15T08:15:00.000Z",
+    "durationSeconds": 3351,
+    "audioUrl": "https://episodes.captivate.fm/episode/6b788e87-17da-4403-bf83-de635b86e30f.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
+    "episodeNumber": 53,
+    "season": 2,
+    "imageUrl": "https://artwork.captivate.fm/f850e6da-30cb-4633-b2d0-c0a6c93ace4e/Spotify-Times-Talk-jpg.jpeg",
+    "explicit": false
+  },
+  {
+    "showSlug": "timestalk",
     "guid": "34bb53ce-3100-4d6c-b1c2-8acad4fc16c9",
     "title": "Unpacking week 6 of the Yorgen Fenech trial",
     "description": "From WhatsApp chats and an infamous video to a huge Electrogas investigation, a lot happened this weekA week is a long time in politics, they say, and so it seems in the trial of Yorgen Fenech as well. A lot has happened in court this week, and Times Talk unpacks it all in the latest episode about t",
@@ -61,22 +77,6 @@
     "episodeNumber": 49,
     "season": 2,
     "imageUrl": "https://artwork.captivate.fm/748e4474-4b00-49e9-be3d-806cd54bb442/Times-Talk-Try-3-1.jpg",
-    "explicit": false
-  },
-  {
-    "showSlug": "timestalk",
-    "guid": "51a68437-c784-4553-ae6b-f159c2719b37",
-    "title": "The trial of Yorgen Fenech - Week 4",
-    "description": "It was a week of claims, counterclaims and secret recordings as the fourth week of the Yorgen Fenech trial drew to a close.Times of Malta court reporter Clara Farrugia and editor-in-chief Herman Grech sat down for a new episode of Times Talk to unpack the latest courtroom drama gripping the country.",
-    "pubDate": "Sat, 25 Jul 2026 06:00:00 +0200",
-    "pubDateIso": "2026-07-25T04:00:00.000Z",
-    "durationSeconds": 1184,
-    "audioUrl": "https://episodes.captivate.fm/episode/51a68437-c784-4553-ae6b-f159c2719b37.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
-    "episodeNumber": 48,
-    "season": 2,
-    "imageUrl": "https://artwork.captivate.fm/4977fc9d-7af7-46d8-b8be-19c246fba80b/Times-Talk-Try-3.jpg",
     "explicit": false
   },
   {
