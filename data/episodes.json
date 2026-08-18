@@ -1,6 +1,22 @@
 [
   {
     "showSlug": "timestalk",
+    "guid": "01fe5eb7-231a-49a5-9051-71f77305231f",
+    "title": "Times Talk: What happened when the trial went silent",
+    "description": "When the live blogs from the trial of Yorgen Fenech went silent on Friday, social media was flooded with people asking why no journalist would tell them what was going on.In this special episode of Times Talk, court reporter Clara Farrugia and Mark Laurence Zammit unpack all that happened when Yorge",
+    "pubDate": "Tue, 18 Aug 2026 06:00:00 +0200",
+    "pubDateIso": "2026-08-18T04:00:00.000Z",
+    "durationSeconds": 2222,
+    "audioUrl": "https://episodes.captivate.fm/episode/01fe5eb7-231a-49a5-9051-71f77305231f.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
+    "episodeNumber": 54,
+    "season": 2,
+    "imageUrl": "https://artwork.captivate.fm/a7a12f33-bfe3-456f-98d2-ceaa862a4901/Spotify-Times-Talk-3-jpg.jpeg",
+    "explicit": false
+  },
+  {
+    "showSlug": "timestalk",
     "guid": "6b788e87-17da-4403-bf83-de635b86e30f",
     "title": "Melvin takes the stand against Yorgen Fenech",
     "description": "The taxi driver who says Yorgen Fenech paid him €150,000 to have Daphne Caruana Galizia spent five gruelling days on the witness stand this week, answering questions from prosecutors and defence lawyers.Melvin Theuma - the pardoned middleman who is the prosecution's star witness in the case - had a ",
@@ -61,22 +77,6 @@
     "episodeNumber": 50,
     "season": 2,
     "imageUrl": "https://artwork.captivate.fm/c2e068e8-f481-4301-9f4f-75e408c20c87/Times-Talk-Try-3.jpg",
-    "explicit": false
-  },
-  {
-    "showSlug": "timestalk",
-    "guid": "6255020f-96a2-4773-bc3c-a36ffa0eb6d3",
-    "title": "Times Talk: Why we&apos;re breaking our usual schedule to bring you this episode",
-    "description": "Times Talk on the trial of Yorgen Fenech usually comes out on the weekend and includes a run-down of all that happened that week.But as former OPM chief of staff Keith Schembri took the witness stand on Tuesday, things got heated and prompted this mid-week episode about what happened before and duri",
-    "pubDate": "Thu, 30 Jul 2026 14:00:00 +0200",
-    "pubDateIso": "2026-07-30T12:00:00.000Z",
-    "durationSeconds": 2243,
-    "audioUrl": "https://episodes.captivate.fm/episode/6255020f-96a2-4773-bc3c-a36ffa0eb6d3.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
-    "episodeNumber": 49,
-    "season": 2,
-    "imageUrl": "https://artwork.captivate.fm/748e4474-4b00-49e9-be3d-806cd54bb442/Times-Talk-Try-3-1.jpg",
     "explicit": false
   },
   {
