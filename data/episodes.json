@@ -1,6 +1,22 @@
 [
   {
     "showSlug": "timestalk",
+    "guid": "5d6a686b-83a7-4322-bf02-489f10ed8455",
+    "title": "Times Talk: The day the trial almost fell apart",
+    "description": "One of the biggest and most consequential criminal trials in history almost fell apart on Friday.After 45 days of intense hearings, the defence demanded the judge dissolves the trial of Yorgen Fenech after court was told that the jurors had access to news headlines about the trial.In the short time ",
+    "pubDate": "Sat, 22 Aug 2026 06:00:00 +0200",
+    "pubDateIso": "2026-08-22T04:00:00.000Z",
+    "durationSeconds": 2413,
+    "audioUrl": "https://episodes.captivate.fm/episode/5d6a686b-83a7-4322-bf02-489f10ed8455.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
+    "episodeNumber": 55,
+    "season": 2,
+    "imageUrl": "https://artwork.captivate.fm/461e49f4-6e57-4918-96fd-7f15bdc30dc5/Spotify-Times-Talk.jpg",
+    "explicit": false
+  },
+  {
+    "showSlug": "timestalk",
     "guid": "01fe5eb7-231a-49a5-9051-71f77305231f",
     "title": "Times Talk: What happened when the trial went silent",
     "description": "When the live blogs from the trial of Yorgen Fenech went silent on Friday, social media was flooded with people asking why no journalist would tell them what was going on.In this special episode of Times Talk, court reporter Clara Farrugia and Mark Laurence Zammit unpack all that happened when Yorge",
@@ -61,22 +77,6 @@
     "episodeNumber": 51,
     "season": 2,
     "imageUrl": "https://artwork.captivate.fm/1674ffab-fa55-4fe5-83eb-864eb2ab272f/Times-Talk-Try-3.jpg",
-    "explicit": false
-  },
-  {
-    "showSlug": "timestalk",
-    "guid": "27459c52-2c96-47ce-b0db-0e76210c55b3",
-    "title": "Inside week 5 in the trial of Yorgen Fenech | Times Talk",
-    "description": "The latest episode of Times Talk unpacks the last two days of Keith Schembri's testimony during the trial of Yorgen Fenech earlier this week.In the 30-minute episode, court reporter Clara Farrugia and Mark Laurence Zammit take a deep dive into some of the toughest questions the former OPM chief of s",
-    "pubDate": "Sat, 01 Aug 2026 06:00:00 +0200",
-    "pubDateIso": "2026-08-01T04:00:00.000Z",
-    "durationSeconds": 1758,
-    "audioUrl": "https://episodes.captivate.fm/episode/27459c52-2c96-47ce-b0db-0e76210c55b3.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
-    "episodeNumber": 50,
-    "season": 2,
-    "imageUrl": "https://artwork.captivate.fm/c2e068e8-f481-4301-9f4f-75e408c20c87/Times-Talk-Try-3.jpg",
     "explicit": false
   },
   {
