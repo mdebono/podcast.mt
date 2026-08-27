@@ -1,6 +1,22 @@
 [
   {
     "showSlug": "timestalk",
+    "guid": "ff7b1a3f-afd1-47ab-a374-746d4e5b21bc",
+    "title": "Yorgen Fenech testifies in his own trial",
+    "description": "A version of this show with English subtitles will be published on the Times of Malta YouTube channel.Yorgen Fenech is the man in the dock. This past week, he was the man on the witness stand, too.The Tumas Group heir and business magnate spent four days testifying in his own trial, as he seeks to d",
+    "pubDate": "Thu, 27 Aug 2026 06:30:00 +0200",
+    "pubDateIso": "2026-08-27T04:30:00.000Z",
+    "durationSeconds": 3691,
+    "audioUrl": "https://episodes.captivate.fm/episode/ff7b1a3f-afd1-47ab-a374-746d4e5b21bc.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
+    "episodeNumber": 56,
+    "season": 2,
+    "imageUrl": "https://artwork.captivate.fm/9ab8348b-d904-475b-b719-7e4d9526440c/Spotify-Times-Talk.jpg",
+    "explicit": false
+  },
+  {
+    "showSlug": "timestalk",
     "guid": "5d6a686b-83a7-4322-bf02-489f10ed8455",
     "title": "The day the trial almost fell apart",
     "description": "One of the biggest and most consequential criminal trials in history almost fell apart on Friday.After 45 days of intense hearings, the defence demanded the judge dissolves the trial of Yorgen Fenech after court was told that the jurors had access to news headlines about the trial.In the short time ",
@@ -77,22 +93,6 @@
     "episodeNumber": 52,
     "season": 2,
     "imageUrl": "https://artwork.captivate.fm/ceb89d98-9c5c-4654-91bb-05003044d6ed/WhatsApp-Image-2026-08-07-at-17-39-31-1.jpeg",
-    "explicit": false
-  },
-  {
-    "showSlug": "timestalk",
-    "guid": "21ddc880-aa1f-48cf-a4e0-86e81262fadf",
-    "title": "A sex abuse victim and the priest who told her to move on",
-    "description": "In June 2025, a retired Maltese bishop caused a stir when he said on TV that abuse victims should first be encouraged to forgive their abusers before going to the police.As backlash grew, George Frendo apologised, saying he had not meant that forgiveness should substitute reporting such crimes to au",
-    "pubDate": "Sun, 02 Aug 2026 07:30:00 +0200",
-    "pubDateIso": "2026-08-02T05:30:00.000Z",
-    "durationSeconds": 4515,
-    "audioUrl": "https://episodes.captivate.fm/episode/21ddc880-aa1f-48cf-a4e0-86e81262fadf.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
-    "episodeNumber": 51,
-    "season": 2,
-    "imageUrl": "https://artwork.captivate.fm/1674ffab-fa55-4fe5-83eb-864eb2ab272f/Times-Talk-Try-3.jpg",
     "explicit": false
   },
   {
