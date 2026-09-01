@@ -1,5 +1,21 @@
 [
   {
+    "showSlug": "timestalk",
+    "guid": "67c7fbe3-8af9-48e4-98d7-ed47b185dc7f",
+    "title": "Your questions about the Yorgen Fenech trial, answered",
+    "description": "Editorial note: A version of this episode with English subtitles will be available on the Times of Malta YouTube channelAs the trial of Yorgen Fenech approaches its end, Clara Farrugia answers some of the many questions readers have sent us about this trial.Is any vote by jurors valid? If Fenech is ",
+    "pubDate": "Tue, 01 Sep 2026 06:30:00 +0200",
+    "pubDateIso": "2026-09-01T04:30:00.000Z",
+    "durationSeconds": 2049,
+    "audioUrl": "https://episodes.captivate.fm/episode/67c7fbe3-8af9-48e4-98d7-ed47b185dc7f.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
+    "episodeNumber": 57,
+    "season": 2,
+    "imageUrl": "https://artwork.captivate.fm/63436483-8c17-4341-a6a3-c4be5dfda3b2/Spotify-Times-Talk.jpg",
+    "explicit": false
+  },
+  {
     "showSlug": "the-she-word",
     "guid": "daf2174e-032a-4baa-8d67-18b590475e9c",
     "title": "The SHE Word - Building Back From Break Ups",
@@ -93,22 +109,6 @@
     "episodeNumber": 53,
     "season": 2,
     "imageUrl": "https://artwork.captivate.fm/f850e6da-30cb-4633-b2d0-c0a6c93ace4e/Spotify-Times-Talk-jpg.jpeg",
-    "explicit": false
-  },
-  {
-    "showSlug": "timestalk",
-    "guid": "34bb53ce-3100-4d6c-b1c2-8acad4fc16c9",
-    "title": "Unpacking week 6 of the Yorgen Fenech trial",
-    "description": "From WhatsApp chats and an infamous video to a huge Electrogas investigation, a lot happened this weekA week is a long time in politics, they say, and so it seems in the trial of Yorgen Fenech as well. A lot has happened in court this week, and Times Talk unpacks it all in the latest episode about t",
-    "pubDate": "Sat, 08 Aug 2026 07:30:00 +0200",
-    "pubDateIso": "2026-08-08T05:30:00.000Z",
-    "durationSeconds": 2563,
-    "audioUrl": "https://episodes.captivate.fm/episode/34bb53ce-3100-4d6c-b1c2-8acad4fc16c9.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
-    "episodeNumber": 52,
-    "season": 2,
-    "imageUrl": "https://artwork.captivate.fm/ceb89d98-9c5c-4654-91bb-05003044d6ed/WhatsApp-Image-2026-08-07-at-17-39-31-1.jpeg",
     "explicit": false
   },
   {
