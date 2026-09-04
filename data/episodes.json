@@ -1,5 +1,21 @@
 [
   {
+    "showSlug": "timestalk",
+    "guid": "606c449f-8cbf-4f6e-ac5c-759005e0eece",
+    "title": "The verdict that stunned the nation",
+    "description": "At the end of an intense trial that lasted over two months, the nation held its breath on Wednesday evening as the jury announced a verdict that acquitted Yorgen Fenech of all charges over the murder of Daphne Caruana Galizia, by eight votes to one.Reactions, comments and protests stretched late int",
+    "pubDate": "Fri, 04 Sep 2026 07:30:00 +0200",
+    "pubDateIso": "2026-09-04T05:30:00.000Z",
+    "durationSeconds": 1839,
+    "audioUrl": "https://episodes.captivate.fm/episode/606c449f-8cbf-4f6e-ac5c-759005e0eece.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
+    "episodeNumber": 58,
+    "season": 2,
+    "imageUrl": "https://artwork.captivate.fm/c1c3e9aa-d21a-4823-bd20-2fccfd296951/Spotify-Times-Talk-2.jpg",
+    "explicit": false
+  },
+  {
     "showSlug": "the-she-word",
     "guid": "16b4ada7-b25a-4369-8ebb-0d8f39398641",
     "title": "The Voices of Women in Power - Vanessa Frazier, brought to you by The SHE Word",
@@ -109,22 +125,6 @@
     "episodeNumber": 54,
     "season": 2,
     "imageUrl": "https://artwork.captivate.fm/a7a12f33-bfe3-456f-98d2-ceaa862a4901/Spotify-Times-Talk-3-jpg.jpeg",
-    "explicit": false
-  },
-  {
-    "showSlug": "timestalk",
-    "guid": "6b788e87-17da-4403-bf83-de635b86e30f",
-    "title": "Melvin takes the stand against Yorgen Fenech",
-    "description": "The taxi driver who says Yorgen Fenech paid him €150,000 to have Daphne Caruana Galizia spent five gruelling days on the witness stand this week, answering questions from prosecutors and defence lawyers.Melvin Theuma - the pardoned middleman who is the prosecution's star witness in the case - had a ",
-    "pubDate": "Sat, 15 Aug 2026 10:15:00 +0200",
-    "pubDateIso": "2026-08-15T08:15:00.000Z",
-    "durationSeconds": 3351,
-    "audioUrl": "https://episodes.captivate.fm/episode/6b788e87-17da-4403-bf83-de635b86e30f.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
-    "episodeNumber": 53,
-    "season": 2,
-    "imageUrl": "https://artwork.captivate.fm/f850e6da-30cb-4633-b2d0-c0a6c93ace4e/Spotify-Times-Talk-jpg.jpeg",
     "explicit": false
   },
   {
