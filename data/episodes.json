@@ -1,5 +1,21 @@
 [
   {
+    "showSlug": "timestalk",
+    "guid": "e12ebb1f-ad12-4b97-8509-d32a0642c368",
+    "title": "Murder middleman Melvin Theuma: &apos;I told the whole truth&apos;",
+    "description": "In an exclusive interview with Times of Malta, Melvin Theuma, the middleman who helped arrange Daphne Caruana Galizia’s murder, tells Mark Laurence Zammit why he stands by every word of his evidence against Yorgen Fenech, and why the acquittal has not changed what he knows.",
+    "pubDate": "Sun, 13 Sep 2026 07:15:00 +0200",
+    "pubDateIso": "2026-09-13T05:15:00.000Z",
+    "durationSeconds": 4359,
+    "audioUrl": "https://episodes.captivate.fm/episode/e12ebb1f-ad12-4b97-8509-d32a0642c368.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
+    "episodeNumber": 59,
+    "season": 2,
+    "imageUrl": "https://artwork.captivate.fm/470e8e48-0bc8-40fa-8431-c43250b4390d/Spotify-Times-Talk-1.jpg",
+    "explicit": false
+  },
+  {
     "showSlug": "il-podcast-tal-parlament",
     "guid": "https://r2.parlament.podcast.mt/Audio/15thLeg/Standing Committee on the Environment, Climate Change and Development Planning/Standing Committee clim 001 - 04-09-2026.mp3",
     "title": "Kumitat Permanenti dwar l-Ambjent, it-Tibdil fil-Klima u l-Ippjanar tal-Iżvilupp M001",
@@ -157,22 +173,6 @@
     "episodeNumber": null,
     "season": null,
     "imageUrl": null,
-    "explicit": false
-  },
-  {
-    "showSlug": "timestalk",
-    "guid": "01fe5eb7-231a-49a5-9051-71f77305231f",
-    "title": "What happened when the trial went silent",
-    "description": "When the live blogs from the trial of Yorgen Fenech went silent on Friday, social media was flooded with people asking why no journalist would tell them what was going on.In this special episode of Times Talk, court reporter Clara Farrugia and Mark Laurence Zammit unpack all that happened when Yorge",
-    "pubDate": "Tue, 18 Aug 2026 06:00:00 +0200",
-    "pubDateIso": "2026-08-18T04:00:00.000Z",
-    "durationSeconds": 2222,
-    "audioUrl": "https://episodes.captivate.fm/episode/01fe5eb7-231a-49a5-9051-71f77305231f.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://timesofmalta.com/articles/listing/%23timestalk",
-    "episodeNumber": 54,
-    "season": 2,
-    "imageUrl": "https://artwork.captivate.fm/a7a12f33-bfe3-456f-98d2-ceaa862a4901/Spotify-Times-Talk-3-jpg.jpeg",
     "explicit": false
   },
   {
