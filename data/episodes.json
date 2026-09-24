@@ -1,6 +1,22 @@
 [
   {
     "showSlug": "the-she-word",
+    "guid": "027be884-e539-4bb0-9e4e-6499d44a8813",
+    "title": "The SHE Word AFTERHOURS - Unfiltered with Special Guest James Ryder",
+    "description": "We often get asked ‘why do you have men on The SHE Word? It is a Women’s Show’. True. The SHE Word is all about conversations Women rarely have, but once in a while it is good to get a male perspective. Most of us want to understand the less fairer sex bit better. After all, we want men as allies do",
+    "pubDate": "Thu, 24 Sep 2026 10:00:00 GMT",
+    "pubDateIso": "2026-09-24T10:00:00.000Z",
+    "durationSeconds": 4473,
+    "audioUrl": "https://content.rss.com/episodes/18823/3149840/theinterviewer/2026_09_14_12_08_24_44cc613a-e195-448d-854a-531c120b1f7a.mp3",
+    "audioType": "audio/mpeg",
+    "episodeUrl": "https://rss.com/podcasts/theinterviewer/3149840",
+    "episodeNumber": 9,
+    "season": 26,
+    "imageUrl": "https://media.rss.com/theinterviewer/ep_cover_20260914_120727_a540006f37dcf9d00115ece0587f3d8c.jpg",
+    "explicit": false
+  },
+  {
+    "showSlug": "the-she-word",
     "guid": "4d598663-9833-46c0-931f-421cebf59457",
     "title": "The SHE Word - Everything a Woman Needs to Know About Her Body and Mind",
     "description": "“Women are not small men”. That sounds like an obvious statement, but it is really isn’t.   Women are characterised by a 28 day (average) cycle, a complex reproductive system, a mind that is active all waking hours (unlike our male counterparts), a mindset that has a natural focus on caring, and an ",
@@ -285,22 +301,6 @@
     "episodeNumber": null,
     "season": null,
     "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/13948408/13948408-1645521893673-90bbcf0399d1e.jpg",
-    "explicit": false
-  },
-  {
-    "showSlug": "the-she-word",
-    "guid": "234fc478-eb63-4986-9489-7c7396ba17ce",
-    "title": "The SHE Word - Women and ADHD, the neurodivergent superpower",
-    "description": "ADHD remains a largely misunderstood and often misdiagnosed condition. Despite growing awareness, chronic underdiagnosis has historically hindered millions from getting support.Recent years however, have seen a surge in adult diagnoses. ADHD diagnoses in women aged 23–49 nearly DOUBLED between 2020 ",
-    "pubDate": "Wed, 10 Jun 2026 15:20:15 GMT",
-    "pubDateIso": "2026-06-10T15:20:15.000Z",
-    "durationSeconds": 5437,
-    "audioUrl": "https://content.rss.com/episodes/18823/2904220/theinterviewer/2026_06_10_15_11_22_5fa21a45-f161-4e2e-b2f3-b2756571d885.mp3",
-    "audioType": "audio/mpeg",
-    "episodeUrl": "https://rss.com/podcasts/theinterviewer/2904220",
-    "episodeNumber": 5,
-    "season": 24,
-    "imageUrl": "https://media.rss.com/theinterviewer/ep_cover_20260610_030648_45b82d6a5af34ff780eab0a1735c0198.png",
     "explicit": false
   },
   {
