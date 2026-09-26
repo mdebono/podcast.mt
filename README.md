@@ -97,7 +97,17 @@ The workflow runs every 6 hours and also whenever you push changes to
 
 ---
 
-## Data files (auto-generated, do not edit manually)
+## Data files (auto-generated, not committed)
+
+These are gitignored: `npm run build` runs the ingestion before `astro build`,
+so every Vercel deploy fetches fresh data. The scheduled workflow keeps a copy
+of the files as the `ingested-data` artifact on each run (Actions → run →
+Artifacts, kept 14 days) and only calls the deploy hook when the data changed.
+
+To detect changes, ingestion also writes a fingerprint of the data (plus the
+current date, so "new" badges refresh daily) to `public/data-version.txt`,
+which is served at https://podcast.mt/data-version.txt. A scheduled run whose
+fingerprint matches the live one skips the deploy.
 
 | File | Contents |
 |---|---|
