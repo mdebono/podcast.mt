@@ -56,3 +56,4 @@ Thumbs.db
 data/episodes.json
 data/shows-enriched.json
 data/ingest-summary.json
+public/data-version.txt
