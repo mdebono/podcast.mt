@@ -11,6 +11,7 @@
  */
 
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
+import { createHash } from 'crypto';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { XMLParser } from 'fast-xml-parser';
@@ -18,6 +19,7 @@ import { XMLParser } from 'fast-xml-parser';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const DATA_DIR = resolve(ROOT, 'data');
+const PUBLIC_DIR = resolve(ROOT, 'public');
 
 const MAX_EPISODES_PER_SHOW = 5;
 const FETCH_TIMEOUT_MS = 10_000;
@@ -212,12 +214,22 @@ async function main() {
       return db - da;
     });
 
+  // Fingerprint of everything the built site depends on, so the scheduled
+  // workflow can skip redeploying when nothing changed. The UTC date is
+  // included because "new" badges are computed at build time.
+  const dataVersion = createHash('sha256')
+    .update(new Date().toISOString().slice(0, 10))
+    .update(JSON.stringify(allEpisodes))
+    .update(JSON.stringify(enrichedShows.map(({ ingestAt, ...s }) => s)))
+    .digest('hex');
+
   // Summary stats
   const successCount = results.filter((r) => !r.error && r.show.active).length;
   const errorCount = results.filter((r) => r.error).length;
 
   const summary = {
     ingestedAt: new Date().toISOString(),
+    dataVersion,
     showCount: shows.length,
     activeCount: shows.filter((s) => s.active).length,
     successCount,
@@ -248,6 +260,11 @@ async function main() {
     JSON.stringify(summary, null, 2)
   );
   log(`Wrote ingest-summary.json`);
+
+  // Published with the site so the workflow can compare against what's live
+  mkdirSync(PUBLIC_DIR, { recursive: true });
+  writeFileSync(resolve(PUBLIC_DIR, 'data-version.txt'), dataVersion + '\n');
+  log(`Wrote public/data-version.txt (${dataVersion.slice(0, 12)})`);
 
   log(`Done — ${successCount} ok, ${errorCount} errors`);
   if (errorCount > 0) {

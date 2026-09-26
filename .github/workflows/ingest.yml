@@ -63,16 +63,46 @@ jobs:
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
 
+      # Decide whether to call the deploy hook:
+      # - push: no, Vercel's Git integration already deploys every push
+      # - schedule: only if the ingested data differs from what the live site
+      #   was built with (published as /data-version.txt)
+      # - manual run: always
+      - name: Check whether data changed
+        id: changes
+        env:
+          SITE_URL: https://podcast.mt
+          EVENT: ${{ github.event_name }}
+        run: |
+          NEW=$(node -p "require('./data/ingest-summary.json').dataVersion")
+          LIVE=$(curl -fsS "$SITE_URL/data-version.txt" | tr -d '[:space:]' || true)
+          echo "New data version:  $NEW"
+          echo "Live data version: ${LIVE:-unknown}"
+          if [ "$EVENT" = "push" ]; then
+            echo "Push event, Vercel deploys it via Git integration."
+            echo "deploy=false" >> "$GITHUB_OUTPUT"
+          elif [ "$EVENT" = "schedule" ] && [ "$NEW" = "$LIVE" ]; then
+            echo "No changes since the last deploy, skipping."
+            echo "deploy=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "deploy=true" >> "$GITHUB_OUTPUT"
+          fi
+
       # Trigger a Vercel deployment via deploy hook
       # Add your hook URL as a secret: Settings → Secrets → VERCEL_DEPLOY_HOOK
+      # (a step's own env isn't visible to its `if`, so the secret is checked
+      # inside the script)
       - name: Trigger Vercel deploy
-        if: env.VERCEL_DEPLOY_HOOK != ''
+        if: steps.changes.outputs.deploy == 'true'
         env:
           VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
         run: |
+          if [ -z "$VERCEL_DEPLOY_HOOK" ]; then
+            echo "::error::VERCEL_DEPLOY_HOOK secret is not set, the site was not redeployed."
+            exit 1
+          fi
           echo "Triggering Vercel deploy…"
-          curl -s -o /dev/null -w "HTTP %{http_code}" -X POST "$VERCEL_DEPLOY_HOOK"
-          echo ""
+          curl -fsS -o /dev/null -w "HTTP %{http_code}\n" -X POST "$VERCEL_DEPLOY_HOOK"
 
       # Optional: notify you on Slack/email if there were feed errors
       - name: Check for errors
