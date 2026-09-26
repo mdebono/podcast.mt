@@ -1,0 +1,39 @@
+---
+// src/pages/404.astro
+// Also forwards the parlament.mt shortcut: podcast.mt/<parlament.mt URL>
+// (e.g. podcast.mt/parlament.mt/mt/15th-leg/plenary-session/ps-017-04092026-0930-am/)
+// goes to parlament.podcast.mt/parlament.mt/..., which redirects to that
+// sitting's episode on Spotify.
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Not found — podcast.mt" description="Page not found.">
+  <script is:inline>
+    (function () {
+      var path;
+      try { path = decodeURIComponent(location.pathname); } catch (e) { path = location.pathname; }
+      var m = path.match(/^\/{0,}(?:https?:\/{0,})?(?:www\.)?parlament\.mt(?=[\/?#]|$)\/{0,}(.*)$/i);
+      if (m) location.replace('https://parlament.podcast.mt/parlament.mt/' + m[1]);
+    })();
+  </script>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-eyebrow">404</p>
+      <h1 class="page-title" data-i18n="notFound.title">Page not found</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container--narrow not-found-body">
+      <p>
+        <span data-i18n="notFound.text">This page doesn't exist.</span>
+        <a href="/" data-i18n="notFound.home">Go to the homepage →</a>
+      </p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .not-found-body { padding-block: 2rem; }
+</style>
