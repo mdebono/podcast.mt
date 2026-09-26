@@ -97,7 +97,12 @@ The workflow runs every 6 hours and also whenever you push changes to
 
 ---
 
-## Data files (auto-generated, do not edit manually)
+## Data files (auto-generated, not committed)
+
+These are gitignored: `npm run build` runs the ingestion before `astro build`,
+so every Vercel deploy fetches fresh data. The scheduled workflow only triggers
+that deploy and keeps a copy of the files as the `ingested-data` artifact on
+each run (Actions → run → Artifacts, kept 14 days).
 
 | File | Contents |
 |---|---|
