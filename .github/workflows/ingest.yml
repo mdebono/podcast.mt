@@ -1,7 +1,7 @@
 name: RSS Ingestion & Deploy
 
 permissions:
-  contents: write
+  contents: read
 
 on:
   # Run every 6 hours
@@ -41,21 +41,27 @@ jobs:
       - name: Run RSS ingestion
         run: node scripts/ingest.js
 
-      - name: Show ingestion summary
-        run: cat data/ingest-summary.json
-
-      # Commit updated episodes.json and shows-enriched.json back to the repo
-      # so the build always has fresh data even if Vercel deploy hook fails
-      - name: Commit ingested data
-        uses: stefanzweifel/git-auto-commit-action@v5
+      # Keep the generated data as a downloadable workflow artifact instead of
+      # committing it: the Vercel build re-runs ingestion itself (npm run build)
+      - name: Upload ingested data
+        uses: actions/upload-artifact@v4
         with:
-          commit_message: 'chore: refresh RSS data [skip ci]'
-          file_pattern: |
+          name: ingested-data
+          path: |
             data/episodes.json
             data/shows-enriched.json
             data/ingest-summary.json
-          commit_user_name: 'podcast-mt-bot'
-          commit_user_email: 'bot@podcast.mt'
+          retention-days: 14
+
+      - name: Show ingestion summary
+        run: |
+          cat data/ingest-summary.json
+          {
+            echo '### Ingestion summary'
+            echo '```json'
+            cat data/ingest-summary.json
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
 
       # Trigger a Vercel deployment via deploy hook
       # Add your hook URL as a secret: Settings → Secrets → VERCEL_DEPLOY_HOOK
@@ -76,5 +82,5 @@ jobs:
             console.log(s.errorCount);
           ")
           if [ "$ERRORS" -gt "0" ]; then
-            echo "::warning::$ERRORS feed(s) failed to ingest. Check ingest-summary.json."
+            echo "::warning::$ERRORS feed(s) failed to ingest. See the run summary or the ingested-data artifact."
           fi
