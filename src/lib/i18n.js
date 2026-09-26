@@ -164,6 +164,11 @@ const translations = {
     showCard: {
       newEpisodeTitle: 'Episodju ġdid din il-ġimgħa',
     },
+    notFound: {
+      title: 'Il-paġna ma nstabitx',
+      text: 'Din il-paġna ma teżistix.',
+      home: 'Mur fil-paġna ewlenija →',
+    },
   },
   en: {
     nav: {
@@ -325,6 +330,11 @@ const translations = {
     },
     showCard: {
       newEpisodeTitle: 'New episode this week',
+    },
+    notFound: {
+      title: 'Page not found',
+      text: 'This page doesn\'t exist.',
+      home: 'Go to the homepage →',
     },
   },
 };
